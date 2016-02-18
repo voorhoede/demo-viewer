@@ -1,0 +1,36 @@
+{
+  "name": "demo-viewer",
+  "version": "0.0.1",
+  "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
+  "scripts": {
+    "prebuild": "rm -rf dist/ && mkdir dist/",
+    "build": "npm-run-all --parallel build:css build:js",
+    "build:css": "cp src/index.css dist/demo-viewer.css",
+    "build:js": "npm run build:tags && npm run build:concat",
+    "build:tags": "riot --ext tag.html src/modules/ dist/tags.js",
+    "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
+    "postbuild": "rm dist/tags.js",
+    "start": "http-server './' -c-1 -o -p 3366",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "chokidar 'src/index.css' --command 'npm run build:css'",
+    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmoelker/demo-viewer.git"
+  },
+  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbmoelker/demo-viewer/issues"
+  },
+  "homepage": "https://github.com/jbmoelker/demo-viewer#readme",
+  "devDependencies": {
+    "chokidar-cli": "1.2.0",
+    "concat-cli": "4.0.0",
+    "http-server": "0.8.5",
+    "npm-run-all": "1.5.1",
+    "riot": "2.3.15"
+  }
+}

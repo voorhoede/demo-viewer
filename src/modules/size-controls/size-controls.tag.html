@@ -1,0 +1,81 @@
+<size-controls class="viewer-size-controls">
+
+    <button each="{ size in opts.sizes }"
+            class="viewer-button { 'is-active': size.width == width }"
+            onclick="{ onSelectSize }">
+        { size.name }
+    </button>
+    <button class="viewer-button viewer-button-full { 'is-active': autoWidth }"
+            onclick="{ toggleAutoWidth }">
+        FULL
+    </button>
+    <div class="viewer-width-input-wrapper">
+        <input class="viewer-width-input"
+               type="number" min="240" step="10" required="true"
+               value="{ width }"
+               oninput="{ onSizeInput }">
+    </div>
+
+    <script>
+        var tag = this;
+        var STORAGE_KEY_AUTO = 'demoViewerAuto';
+        var STORAGE_KEY_WIDTH = 'demoViewerWidth';
+        tag.autoWidth = getSetting(STORAGE_KEY_AUTO);
+        tag.onSizeInput = onSizeInput;
+        tag.onSelectSize = onSelectSize;
+        tag.toggleAutoWidth = toggleAutoWidth;
+        tag.width;
+
+        restoreWidth();
+        window.addEventListener('resize', onResize, false);
+
+        function onResize() {
+            if (tag.autoWidth) { setFullWidth(); }
+        }
+
+        function onSizeInput(event) {
+            disableAutoWidth();
+            setWidth(event.target.value);
+        }
+
+        function onSelectSize(event) {
+            disableAutoWidth();
+            setWidth(event.item.size.width);
+        }
+
+        function setWidth(width) {
+            tag.update({ width: width });
+            if(opts.onResize) {
+                opts.onResize(width);
+            }
+            saveSetting(STORAGE_KEY_WIDTH, width);
+        }
+
+        function setFullWidth() {
+            setWidth(document.documentElement.clientWidth);
+        }
+
+        function toggleAutoWidth() {
+            tag.autoWidth = !tag.autoWidth;
+            if (tag.autoWidth) { setFullWidth(); }
+            saveSetting(STORAGE_KEY_AUTO, tag.autoWidth);
+        }
+
+        function disableAutoWidth() {
+            tag.autoWidth = false;
+            saveSetting(STORAGE_KEY_AUTO, false);
+        }
+
+        function restoreWidth() {
+            var width = getSetting(STORAGE_KEY_WIDTH);
+            (width && !tag.autoWidth) ? setWidth(width) : setFullWidth();
+        }
+
+        function saveSetting(key, value) {
+            localStorage.setItem(key, JSON.stringify(value));
+        }
+        function getSetting(key) {
+            return JSON.parse(localStorage.getItem(key));
+        }
+    </script>
+</size-controls>

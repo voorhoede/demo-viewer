@@ -1,0 +1,73 @@
+<module-selector class="viewer-module-selector">
+
+    <label class="viewer-header-select-wrapper">
+        <span class="a11y-sr-only">Module</span>
+
+        <select name="selector" oninput="{ onModuleSelect }">
+            <yield/>
+            <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
+                <option each="{ module in modules }" value="{ module.url }"
+                        selected="{ module.url == activeModule.url }">
+                    { module.name }
+                </option>
+            </optgroup>
+        </select>
+
+    </label>
+
+    <a href="{ activeModule.url }" target="_blank" title="open module in new window"
+       class="viewer-link viewer-icon-launch"></a>
+
+    <script>
+        var tag = this;
+        tag.activeModule = undefined;
+        tag.onModuleSelect = onModuleSelect;
+        tag.modulesByUrl = {};
+        tag.moduleGroups = {};
+
+        tag.on('mount', function(){
+            selectFromHash();
+            window.addEventListener('hashchange', selectFromHash);
+        });
+
+        tag.on('update', function() {
+            tag.modulesByUrl = indexModulesByUrl(opts.modules || []);
+            tag.moduleGroups = groupModules(opts.modules || []);
+        });
+
+        function groupModules(modules) {
+            return modules.reduce(function(groups, module){
+                var groupName = module.group || '';
+                groups[groupName] = groups[groupName] || [];
+                groups[groupName].push(module);
+                return groups;
+            }, {});
+        }
+
+        function indexModulesByUrl(modules) {
+            return modules.reduce(function(map, module){
+                map[module.url] = module;
+                return map;
+            }, {});
+        }
+
+        function onModuleSelect(event) {
+            selectByUrl(event.target.value);
+        }
+
+        function selectByUrl(url) {
+            var activeModule = tag.modulesByUrl[url];
+            tag.update({ activeModule: activeModule });
+            if(opts.onSelect) { opts.onSelect(activeModule); }
+            window.location.hash = url;
+        }
+
+        function selectFromHash() {
+            var url = window.location.hash.substr(1);
+            if(url.length) {
+                tag.selector.value = url;
+                selectByUrl(url);
+            }
+        }
+    </script>
+</module-selector>

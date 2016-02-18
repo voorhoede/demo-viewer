@@ -1,0 +1,45 @@
+<info-panel class="viewer-info" style="height:60%;">
+
+    <header class="viewer-info-header">
+        <nav class="viewer-info-nav">
+            <ul class="viewer-tabs">
+                <li each="{ section in sections }">
+                    <button class="viewer-button { 'is-active': section == activeSection }"
+                            onclick="{ onSelectSection }">
+                        { section }
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="viewer-info-control">
+            <button class="viewer-button viewer-icon-align-top" title=""></button>
+            <button class="viewer-button viewer-icon-clear" title="close info panel"></button>
+        </div>
+    </header>
+
+    <iframe if="{ activeSection }" class="viewer-info-section"
+            src="{ sections[activeSection] }"
+            width="100%"
+            ></iframe>
+
+    <script>
+        var tag = this;
+        tag.activeSection = undefined;
+        opts.sections = {};
+        tag.onSelectSection = onSelectSection;
+        tag.on('update', onUpdate);
+
+        function onSelectSection(event) {
+            tag.update({ activeSection: event.item.section });
+        }
+
+        function onUpdate() {
+            console.log(tag.sections, opts.sections, tag.sections !== opts.sections);
+            if(tag.sections !== opts.sections) {
+                tag.sections = opts.sections || {};
+                tag.activeSection = Object.keys(tag.sections)[0];
+            }
+        }
+    </script>
+</info-panel>
