@@ -1,6 +1,7 @@
 {
   "name": "demo-viewer",
   "version": "0.0.1",
+  "private": true,
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
     "prebuild": "rm -rf dist/ && mkdir dist/",
