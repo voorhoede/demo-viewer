@@ -35,7 +35,6 @@
         }
 
         function onUpdate() {
-            console.log(tag.sections, opts.sections, tag.sections !== opts.sections);
             if(tag.sections !== opts.sections) {
                 tag.sections = opts.sections || {};
                 tag.activeSection = Object.keys(tag.sections)[0];

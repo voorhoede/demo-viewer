@@ -25,15 +25,18 @@
         tag.modulesByUrl = {};
         tag.moduleGroups = {};
 
-        tag.on('mount', function(){
+        tag.on('mount', onMount);
+        tag.on('update', onUpdate);
+
+        function onMount() {
             selectFromHash();
             window.addEventListener('hashchange', selectFromHash);
-        });
+        }
 
-        tag.on('update', function() {
+        function onUpdate() {
             tag.modulesByUrl = indexModulesByUrl(opts.modules || []);
             tag.moduleGroups = groupModules(opts.modules || []);
-        });
+        }
 
         function groupModules(modules) {
             return modules.reduce(function(groups, module){
@@ -56,18 +59,25 @@
         }
 
         function selectByUrl(url) {
+            url = url || opts.defaultModule;
             var activeModule = tag.modulesByUrl[url];
+
+            if(!activeModule) {
+                var firstGroup = Object.keys(tag.moduleGroups)[0];
+                activeModule = tag.moduleGroups[firstGroup][0];
+                url = activeModule.url;
+            }
+
+            tag.selector.value = url;
             tag.update({ activeModule: activeModule });
             if(opts.onSelect) { opts.onSelect(activeModule); }
+
             window.location.hash = url;
         }
 
         function selectFromHash() {
             var url = window.location.hash.substr(1);
-            if(url.length) {
-                tag.selector.value = url;
-                selectByUrl(url);
-            }
+            selectByUrl(url);
         }
     </script>
 </module-selector>
