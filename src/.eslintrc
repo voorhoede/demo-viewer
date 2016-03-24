@@ -1,0 +1,11 @@
+{
+  "extends": "eslint:recommended",
+  "plugins": ["html"],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "opts": true,
+    "riot": true
+  }
+}
