@@ -4,13 +4,13 @@
   "private": true,
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
-    "prebuild": "rm -rf dist/ && mkdir dist/",
+    "prebuild": "rimraf dist/ && mkdirp dist/",
     "build": "npm-run-all --parallel build:css build:js",
-    "build:css": "cp src/index.css dist/demo-viewer.css",
+    "build:css": "ncp src/index.css dist/demo-viewer.css",
     "build:js": "npm run build:tags && npm run build:concat",
     "build:tags": "riot --ext tag.html src/modules/ dist/tags.js",
     "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
-    "postbuild": "rm dist/tags.js",
+    "postbuild": "rimraf dist/tags.js",
     "start": "http-server './' -c-1 -o -p 3366",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-run-all --parallel watch:*",
@@ -31,7 +31,10 @@
     "chokidar-cli": "1.2.0",
     "concat-cli": "4.0.0",
     "http-server": "0.8.5",
+    "mkdirp": "0.5.1",
+    "ncp": "2.0.0",
     "npm-run-all": "1.5.1",
+    "rimraf": "2.5.2",
     "riot": "2.3.15"
   }
 }
