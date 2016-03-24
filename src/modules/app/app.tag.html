@@ -16,7 +16,7 @@
     </header>
 
     <main class="viewer-content">
-        <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }"/>
+        <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }" on-close="{ closeInfo }" />
 
         <iframe class="viewer-frame"
                 frameBorder="0"
@@ -35,6 +35,7 @@
         tag.infoIsOpen = false;
         tag.setModule = setModule;
         tag.setSize = setSize;
+        tag.closeInfo = closeInfo;
         tag.toggleInfo = toggleInfo;
 
         function setModule(module) {
@@ -43,6 +44,10 @@
 
         function setSize(width) {
             tag.update({ width: width });
+        }
+
+        function closeInfo() {
+            tag.update({ infoIsOpen: false });
         }
 
         function toggleInfo() {
