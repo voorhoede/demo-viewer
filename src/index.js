@@ -9,7 +9,7 @@ window.demoViewer = function(config){
 
     if (typeof config.modules === 'string') {
         getJson(config.modules, function(err, modules) {
-            if (err) { console.log('error fetching modules', err); }
+            if (err) { window.console.log('error fetching modules', err); }
             window.riot.mount(app, { modules: modules, sizes: config.sizes });
         });
     } else {
