@@ -4,7 +4,7 @@
         <nav class="viewer-info-nav">
             <ul class="viewer-tabs">
                 <li each="{ section in sections }">
-                    <button class="viewer-button { 'is-active': section == activeSection }"
+                    <button class="button { 'is-active': section == activeSection }"
                             onclick="{ onSelectSection }">
                         { section }
                     </button>
@@ -13,8 +13,8 @@
         </nav>
 
         <div class="viewer-info-control">
-            <button class="viewer-button viewer-icon-align-top" title=""></button>
-            <button class="viewer-button viewer-icon-clear" title="close info panel"
+            <button class="button viewer-icon-align-top" title=""></button>
+            <button class="button viewer-icon-clear" title="close info panel"
                     onclick="{ opts.onClose }"></button>
         </div>
     </header>

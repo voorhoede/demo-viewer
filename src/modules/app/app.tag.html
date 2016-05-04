@@ -5,11 +5,11 @@
             <yield/>
         </module-selector>
 
-        <button class="viewer-button viewer-icon-info-outline { 'is-active': infoIsOpen }"
+        <button class="button viewer-icon-info-outline { 'is-active': infoIsOpen }"
                 title="toggle module info"
                 disabled="{ !activeModule.info }"
                 onclick="{ toggleInfo }"></button>
-        <button class="viewer-button viewer-icon-label" title="toggle annotations"
+        <button class="button viewer-icon-label" title="toggle annotations"
                 disabled></button>
 
         <size-controls on-resize="{ setSize }" sizes="{ opts.sizes }"/>

@@ -1,0 +1,13 @@
+.viewer-size-controls .button {
+    float: left;
+    display: block;
+    font-size: 1em;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+@media all and (max-width: 840px) {
+    .viewer-size-controls .button {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+.viewer-tabs .button {
+    width: auto;
+    padding: 0 1em;
+    height: 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.viewer-info .viewer-info-control .button {
+    height: 30px;
+    width: 30px;
+}

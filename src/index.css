@@ -1,4 +1,8 @@
+/* include component styles alphabetically */
 @import 'modules/app/app.css';
+@import 'modules/core/core.css';
+@import 'modules/info-panel/info-panel.css';
+@import 'modules/size-controls/size-controls.css';
 
 @font-face {
     font-family: 'icon-font';
@@ -76,45 +80,6 @@ html,
 .viewer-tabs li + li {
     margin-left: 5px;
 }
-.viewer-button {
-    background-color: #e8ecec;
-    color: #1b363b;
-    font-size: 1em;
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    vertical-align: top;
-}
-.viewer-button:before {
-    font-size: 1.4em;
-}
-.viewer-button:hover {
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    background-color: #ccd5d7;
-    cursor: pointer;
-}
-.viewer-button:focus {
-    outline: 0;
-}
-.viewer-tabs .viewer-button {
-    width: auto;
-    padding: 0 1em;
-    height: 30px;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-.viewer-button.is-active {
-    background-color: #1b363b;
-    color: #eddb60;
-}
-.viewer-button.is-active:hover {
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    color: #ccd5d7;
-}
 .viewer-link {
     vertical-align: top;
     display: inline-block;
@@ -134,13 +99,6 @@ html,
     transition: all 0.2s ease-in;
     background-color: #ccd5d7;
     cursor: pointer;
-}
-.viewer-size-controls .viewer-button {
-    float: left;
-    display: block;
-    font-size: 1em;
-    margin-left: 5px;
-    font-weight: bold;
 }
 .viewer-size-controls .viewer-button-full {
     font-size: 0.7em;
@@ -423,10 +381,6 @@ html,
 .viewer-info .viewer-info-control {
     float: right;
 }
-.viewer-info .viewer-info-control .viewer-button {
-    height: 30px;
-    width: 30px;
-}
 .viewer-info-section {
     display: block;
     position: relative;
@@ -485,7 +439,7 @@ html,
     line-height: 1.5;
 }
 .viewer-info-section .viewer-info-readme strong,
-.viewer-info-section .viewer-info-readme bold {
+.viewer-info-section .viewer-info-readme .bold {
     font-size: 0.9375em;
 }
 .viewer-info-section > div {
@@ -495,16 +449,8 @@ a img {
     border: none;
 }
 @media all and (max-width: 840px) {
-    .viewer-size-controls .viewer-button {
-        display: none;
-    }
     .viewer-module-selector button:first-of-type {
         margin-left: 0;
-    }
-}
-@media all and (max-width: 550px) {
-    .viewer-header .viewer-button {
-        display: none;
     }
 }
 @media all and (max-width: 460px) {

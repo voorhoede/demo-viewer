@@ -1,11 +1,11 @@
 <size-controls class="viewer-size-controls">
 
     <button each="{ size in opts.sizes }"
-            class="viewer-button { 'is-active': size.width == width }"
+            class="button { 'is-active': size.width == width }"
             onclick="{ onSelectSize }">
         { size.name }
     </button>
-    <button class="viewer-button viewer-button-full { 'is-active': autoWidth }"
+    <button class="button viewer-button-full { 'is-active': autoWidth }"
             onclick="{ toggleAutoWidth }">
         FULL
     </button>
