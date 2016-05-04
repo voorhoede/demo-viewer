@@ -1,5 +1,6 @@
-.app {
+app {
     font-family: Helvetica, Arial, sans-serif;
+    line-height: 2;
 }
 
 .app-header {
@@ -13,13 +14,5 @@
 }
 
 .app-frame {
-    background-color: #fafafa;
-    border: none;
     border-right: 1px solid #ccc;
-}
-
-@media all and (max-width: 550px) {
-    .app-header .button {
-        display: none;
-    }
 }

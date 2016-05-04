@@ -1,3 +1,15 @@
+/* css reset */
+
+button,
+input,
+optgroup,
+select {
+    /* Use parent font-size (instead of browser default 11px) */
+    font-size: inherit;
+    /* Remove the margin in Firefox and Safari */
+    margin: 0;
+}
+
 /* buttons */
 
 .button {
@@ -36,6 +48,26 @@
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     color: #ccd5d7;
+}
+
+.button-secondary {
+    padding: 0 1em;
+    background-color: #e8ecec;
+    border: 0;
+    line-height: inherit;
+    color: #1b363b;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+    transition: all 0.2s ease-in;
+    background-color: #ccd5d7;
+    cursor: pointer;
+}
+
+.button-secondary.is-active {
+    background-color: #1b363b;
+    color: #eddb60;
 }
 
 /* a11y */

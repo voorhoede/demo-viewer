@@ -5,12 +5,19 @@
             <yield/>
         </module-selector>
 
-        <button class="button icon-info-outline { 'is-active': infoIsOpen }"
-                title="toggle module info"
+        <button class="button-secondary { 'is-active': infoIsOpen }"
+                title="Toggle source"
                 disabled="{ !activeModule.info }"
-                onclick="{ toggleInfo }"></button>
-        <button class="button icon-label" title="toggle annotations"
-                disabled></button>
+                onclick="{ toggleInfo }">
+            <span class="icon-info-outline"></span>
+            <span class="a11y-sr-only">Toggle source</span>
+        </button>
+        <button class="button-secondary"
+                title="Toggle annotations"
+                disabled>
+            <span class="icon-label"></span>
+            <span class="a11y-sr-only">Toggle annotations</span>
+        </button>
 
         <size-controls on-resize="{ setSize }" sizes="{ opts.sizes }"/>
     </header>
