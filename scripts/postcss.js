@@ -7,7 +7,7 @@ postcss([
         require('autoprefixer'),            // vendor prefix for older browsers
         require('cssnano')                  // minify css
     ])
-    .process(fs.readFileSync('src/test.css'), {
+    .process(fs.readFileSync('src/index.css'), {
         from: 'src/index.css',
         to: 'index.css'
     })
