@@ -10,8 +10,48 @@
     font-weight: bold;
 }
 
-.size-controls .viewer-button-full {
+.size-controls .size-controls-button-full {
     font-size: 0.7em;
+}
+
+.size-controls-width-input-wrapper {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 5px;
+    background: #f3f5f5;
+}
+
+.size-controls-width-input-wrapper:before {
+    position: absolute;
+    right: 1em;
+    content: 'px';
+    height: 40px;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 40px;
+    z-index: 10;
+}
+
+.size-controls-width-input {
+    background: #f3f5f5;
+    position: relative;
+    height: 40px;
+    padding: 0 1.5em 0 1em;
+    width: 80px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    text-align: right;
+    -webkit-appearance: none;
+    border: none;
+}
+
+.ie8 .size-controls-width-input {
+    margin-top: 10px;
+    padding-bottom: 14px;
+    height: 1em;
+    vertical-align: middle;
 }
 
 @media all and (max-width: 840px) {
