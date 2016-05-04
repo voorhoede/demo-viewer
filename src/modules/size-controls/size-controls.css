@@ -59,3 +59,9 @@
         display: none;
     }
 }
+
+@media all and (max-width: 420px) {
+    .size-controls-width-input-wrapper {
+        display: none;
+    }
+}

@@ -20,3 +20,99 @@
     background-color: #ccd5d7;
     cursor: pointer;
 }
+
+.module-selector-select-wrapper {
+    display: inline;
+}
+
+:not(.ie8) .module-selector-select-wrapper {
+    background: #e8ecec;
+    box-sizing: border-box;
+    color: #1b363b;
+    display: inline-block;
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0 0 0 50px;
+    position: relative;
+    width: 250px;
+    vertical-align: top;
+    z-index: 1;
+}
+
+:not(.ie8) .module-selector-select-wrapper:before {
+    background-color: #e8ecec;
+    border-left: 3px solid #f3f5f5;
+    box-sizing: border-box;
+    content: '\e8ab';
+    font-size: 1.4em;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 40px;
+    z-index: -1;
+}
+
+.module-selector-select-wrapper select {
+    margin-top: 10px;
+    width: 250px;
+}
+
+:not(.ie8) .module-selector-select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    font-size: 1em;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 0;
+    vertical-align: top;
+    width: 110%;
+}
+
+:not(.ie8) .module-selector-select-wrapper select:hover {
+    cursor: pointer;
+}
+
+:not(.ie8) .module-selector-select-wrapper select:focus {
+    outline: none;
+}
+
+:not(.ie8) .module-selector-select-wrapper select::-ms-expand {
+    display: none;
+    /* to ie 10 */
+}
+
+:-moz-any(.module-selector-select-wrapper):before {
+    background-color: #e8ecec;
+    /* this is necessary for overcome the caret default browser */
+    pointer-events: none;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events  */
+    z-index: 1;
+    /* this is necessary for overcome the pseudo element */
+}
+
+@media all and (max-width: 840px) {
+    .module-selector-selector button:first-of-type {
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .app-header .viewer-link {
+        display: none;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .module-selector-select-wrapper {
+        width: 100%;
+    }
+    .module-selector-width-input-wrapper {
+        display: none;
+    }
+}
