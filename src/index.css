@@ -5,26 +5,6 @@
 @import 'modules/info-panel/info-panel.css';
 @import 'modules/size-controls/size-controls.css';
 
-html {
-    font-family: Arial, sans-serif;
-}
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #444;
-}
-code {
-    font-family: "Menlo", "Lucida Console", monospace;
-    font-size: 0.8375em;
-    line-height: 1.35;
-}
-
-html,
-.viewer {
-    overflow: hidden;
-}
-
 .viewer-module-selector,
 .viewer-logo {
     float: left;
@@ -303,9 +283,6 @@ html,
 .viewer-info-section > div {
     padding: 0 0 2.5em;
 }
-a img {
-    border: none;
-}
 @media all and (max-width: 840px) {
     .viewer-module-selector button:first-of-type {
         margin-left: 0;
@@ -332,24 +309,4 @@ a img {
     .viewer-width-input-wrapper {
         display: none;
     }
-}
-.a11y-sr-only,
-.a11y-kb-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-.a11y-kb-only:active,
-.a11y-kb-only:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
 }

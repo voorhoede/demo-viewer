@@ -1,3 +1,5 @@
+/* buttons */
+
 .button {
     background-color: #e8ecec;
     color: #1b363b;
@@ -34,4 +36,28 @@
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     color: #ccd5d7;
+}
+
+/* a11y */
+
+.a11y-sr-only,
+.a11y-kb-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.a11y-kb-only:active,
+.a11y-kb-only:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }

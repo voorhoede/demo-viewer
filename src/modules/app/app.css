@@ -1,7 +1,15 @@
+.app {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 .app-header {
     background-color: #d3d3d3;
     border-bottom: 1px solid #d0d0d0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.app-content {
+    background-color: #444;
 }
 
 .app-frame {
