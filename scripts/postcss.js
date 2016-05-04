@@ -1,5 +1,5 @@
-var fs = require('fs');
-var postcss = require('postcss');
+const fs = require('fs');
+const postcss = require('postcss');
 
 postcss([
         require('postcss-import'),          // combine imports into one file
@@ -8,12 +8,12 @@ postcss([
         require('cssnano')                  // minify css
     ])
     .process(fs.readFileSync('src/test.css'), {
-        from: 'src/test.css',
-        to: 'test.css'
+        from: 'src/index.css',
+        to: 'index.css'
     })
     .then(function (result) {
-        fs.writeFileSync('dist/test.css', result.css);
+        fs.writeFileSync('dist/index.css', result.css);
         if (result.map) {
-            fs.writeFileSync('dist/test.css.map', result.map);
+            fs.writeFileSync('dist/index.css.map', result.map);
         }
     });
