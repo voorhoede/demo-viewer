@@ -5,20 +5,6 @@
 @import 'modules/info-panel/info-panel.css';
 @import 'modules/size-controls/size-controls.css';
 
-.viewer-logo {
-    max-width: 30px;
-    max-height: 30px;
-    padding: 5px .3em 0 .3em;
-}
-.viewer-tabs {
-    list-style: none;
-}
-.viewer-tabs li {
-    display: inline-block;
-}
-.viewer-tabs li + li {
-    margin-left: 5px;
-}
 .viewer-link {
     vertical-align: top;
     display: inline-block;

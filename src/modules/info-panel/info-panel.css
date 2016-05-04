@@ -1,4 +1,4 @@
-.viewer-tabs .button {
+.info-panel-tabs .button {
     width: auto;
     padding: 0 1em;
     height: 30px;
@@ -62,7 +62,7 @@
     width: auto;
 }
 
-.info-panel .viewer-tabs {
+.info-panel .info-panel-tabs {
     margin: 0;
     padding: 0;
 }
@@ -146,6 +146,18 @@
 
 .info-panel-section > div {
     padding: 0 0 2.5em;
+}
+
+.info-panel-tabs {
+    list-style: none;
+}
+
+.info-panel-tabs li {
+    display: inline-block;
+}
+
+.info-panel-tabs li + li {
+    margin-left: 5px;
 }
 
 @media all and (max-width: 445px) {
