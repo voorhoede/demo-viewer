@@ -5,19 +5,6 @@
 @import 'modules/info-panel/info-panel.css';
 @import 'modules/size-controls/size-controls.css';
 
-.viewer-module-selector,
-.viewer-logo {
-    float: left;
-}
-.viewer-logo:hover {
-    cursor: pointer;
-}
-.viewer-module-selector button:first-of-type {
-    margin-left: 40px;
-}
-.viewer-size-controls {
-    float: right;
-}
 .viewer-info {
     box-sizing: border-box;
     position: absolute;
@@ -69,9 +56,6 @@
     transition: all 0.2s ease-in;
     background-color: #ccd5d7;
     cursor: pointer;
-}
-.viewer-size-controls .viewer-button-full {
-    font-size: 0.7em;
 }
 .viewer-size-input {
     height: 100%;
