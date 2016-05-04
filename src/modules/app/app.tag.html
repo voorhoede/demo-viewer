@@ -1,6 +1,6 @@
 <app>
 
-    <header class="viewer-header">
+    <header class="app-header">
         <module-selector modules="{ opts.modules }" default-module="{ opts.defaultModule }" on-select="{ setModule }">
             <yield/>
         </module-selector>
@@ -15,7 +15,7 @@
         <size-controls on-resize="{ setSize }" sizes="{ opts.sizes }"/>
     </header>
 
-    <main class="viewer-content">
+    <main class="app-content">
         <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }" on-close="{ closeInfo }" />
 
         <iframe class="viewer-frame"
