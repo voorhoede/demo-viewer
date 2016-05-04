@@ -3,31 +3,9 @@
 @import 'modules/core/core.css';
 @import 'modules/icon/icon.css';
 @import 'modules/info-panel/info-panel.css';
+@import 'modules/module-selector/module-selector.css';
 @import 'modules/size-controls/size-controls.css';
 
-.viewer-link {
-    vertical-align: top;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #e8ecec;
-    color: #1b363b;
-    text-decoration: none;
-    text-align: center;
-    line-height: 40px;
-}
-.viewer-link:visited {
-    color: #1b363b;
-}
-.viewer-link:hover {
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    background-color: #ccd5d7;
-    cursor: pointer;
-}
-.viewer-size-input {
-    height: 100%;
-}
 .viewer-width-input-wrapper {
     position: relative;
     display: block;
