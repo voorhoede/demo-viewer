@@ -6,11 +6,150 @@
     font-weight: bold;
 }
 
-.viewer-info .viewer-info-control .button {
+.info-panel .viewer-info-control .button {
     height: 30px;
     width: 30px;
 }
 
 .info-panel code {
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+.info-panel {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background-color: #d3d3d3;
+    width: 100%;
+    overflow-y: hidden;
+    padding: 1em;
+    padding: 0 5px 1em 5px;
+    border-bottom: 1px solid #ccc;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+}
+
+.info-panel-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.info-panel-header {
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    *zoom: 1;
+}
+
+.info-panel-header:before,
+.info-panel-header:after {
+    display: table;
+    content: "";
+}
+
+.info-panel-header:after {
+    clear: both;
+}
+
+.info-panel-header button {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.info-panel-nav {
+    display: inline-block;
+    float: left;
+    width: auto;
+}
+
+.info-panel .viewer-tabs {
+    margin: 0;
+    padding: 0;
+}
+
+.info-panel .info-panel-control {
+    float: right;
+}
+
+.info-panel-section {
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background: #f5f2f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    line-height: 1.35;
+}
+
+.info-panel-section .info-panel-language-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.info-panel-section .info-panel-readme {
+    max-width: 40em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.info-panel-section .info-panel-readme p {
+    margin: 0 0 0.75em;
+}
+
+.info-panel-section .info-panel-readme li {
+    margin-bottom: 0.5em;
+}
+
+.info-panel-section .info-panel-readme h1 {
+    text-transform: uppercase;
+    font-size: 1.125em;
+    margin: 2em 0 2em;
+}
+
+.info-panel-section .info-panel-readme h2 {
+    font-size: 1.125em;
+    margin: 1.5em 0 0.75em;
+}
+
+.info-panel-section .info-panel-readme h3 {
+    font-size: 1em;
+    margin: 0.75em 0 0;
+}
+
+.info-panel-section .info-panel-readme code {
+    background-color: #ddddda;
+    padding: 0.125em 0.25em;
+    font-size: 0.875em;
+    border-radius: 0.25em;
+}
+
+.info-panel-section .info-panel-readme pre {
+    background: #faf7f5;
+    padding: 0.5em 0.75em;
+    margin: 1em 0 1.5em;
+    overflow-x: auto;
+    border: 1px solid #dad7d5;
+    border-radius: 0.25em;
+}
+
+.info-panel-section .info-panel-readme pre code {
+    padding: 0;
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+.info-panel-section .info-panel-readme strong,
+.info-panel-section .info-panel-readme .bold {
+    font-size: 0.9375em;
+}
+
+.info-panel-section > div {
+    padding: 0 0 2.5em;
+}
+
+@media all and (max-width: 445px) {
+    .info-panel {
+        display: none;
+    }
 }

@@ -5,24 +5,6 @@
 @import 'modules/info-panel/info-panel.css';
 @import 'modules/size-controls/size-controls.css';
 
-.viewer-info {
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    background-color: #d3d3d3;
-    width: 100%;
-    overflow-y: hidden;
-    padding: 1em;
-    padding: 0 5px 1em 5px;
-    border-bottom: 1px solid #ccc;
-    -webkit-transition: height .5s;
-    transition: height .5s;
-}
-.viewer-info-close {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-}
 .viewer-logo {
     max-width: 30px;
     max-height: 30px;
@@ -174,99 +156,7 @@
     z-index: 1;
     /* this is necessary for overcome the pseudo element */
 }
-.viewer-info-header {
-    width: 100%;
-    display: block;
-    padding: 5px 0;
-    *zoom: 1;
-}
-.viewer-info-header:before,
-.viewer-info-header:after {
-    display: table;
-    content: "";
-}
-.viewer-info-header:after {
-    clear: both;
-}
-.viewer-info-header button {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-.viewer-info-nav {
-    display: inline-block;
-    float: left;
-    width: auto;
-}
-.viewer-info .viewer-tabs {
-    margin: 0;
-    padding: 0;
-}
-.viewer-info .viewer-info-control {
-    float: right;
-}
-.viewer-info-section {
-    display: block;
-    position: relative;
-    height: 100%;
-    overflow-y: scroll;
-    background: #f5f2f0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    line-height: 1.35;
-}
-.viewer-info-section .viewer-info-language-content {
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-.viewer-info-section .viewer-info-readme {
-    max-width: 40em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-}
-.viewer-info-section .viewer-info-readme p {
-    margin: 0 0 0.75em;
-}
-.viewer-info-section .viewer-info-readme li {
-    margin-bottom: 0.5em;
-}
-.viewer-info-section .viewer-info-readme h1 {
-    text-transform: uppercase;
-    font-size: 1.125em;
-    margin: 2em 0 2em;
-}
-.viewer-info-section .viewer-info-readme h2 {
-    font-size: 1.125em;
-    margin: 1.5em 0 0.75em;
-}
-.viewer-info-section .viewer-info-readme h3 {
-    font-size: 1em;
-    margin: 0.75em 0 0;
-}
-.viewer-info-section .viewer-info-readme code {
-    background-color: #ddddda;
-    padding: 0.125em 0.25em;
-    font-size: 0.875em;
-    border-radius: 0.25em;
-}
-.viewer-info-section .viewer-info-readme pre {
-    background: #faf7f5;
-    padding: 0.5em 0.75em;
-    margin: 1em 0 1.5em;
-    overflow-x: auto;
-    border: 1px solid #dad7d5;
-    border-radius: 0.25em;
-}
-.viewer-info-section .viewer-info-readme pre code {
-    padding: 0;
-    background-color: transparent;
-    line-height: 1.5;
-}
-.viewer-info-section .viewer-info-readme strong,
-.viewer-info-section .viewer-info-readme .bold {
-    font-size: 0.9375em;
-}
-.viewer-info-section > div {
-    padding: 0 0 2.5em;
-}
+
 @media all and (max-width: 840px) {
     .viewer-module-selector button:first-of-type {
         margin-left: 0;
@@ -274,11 +164,6 @@
 }
 @media all and (max-width: 460px) {
     .viewer-header .viewer-link {
-        display: none;
-    }
-}
-@media all and (max-width: 445px) {
-    .viewer-info {
         display: none;
     }
 }
