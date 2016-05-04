@@ -4,6 +4,12 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.app-frame {
+    background-color: #fafafa;
+    border: none;
+    border-right: 1px solid #ccc;
+}
+
 @media all and (max-width: 550px) {
     .app-header .button {
         display: none;

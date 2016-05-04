@@ -42,12 +42,6 @@ html,
 .viewer-size-controls {
     float: right;
 }
-.viewer-frame {
-    background-color: #fafafa;
-    border: none;
-    border-right: 1px solid #ccc;
-}
-
 .viewer-info {
     box-sizing: border-box;
     position: absolute;
