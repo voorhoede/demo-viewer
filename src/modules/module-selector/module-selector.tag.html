@@ -1,7 +1,7 @@
 <module-selector>
 
-    <label for="input-module" class="a11y-sr-only">Module</label>
-    <select class="module-selector-select" id="input-module" name="selector" oninput="{ onModuleSelect }">
+    <label for="selector" class="a11y-sr-only">Module</label>
+    <select class="module-selector-select" id="selector" name="selector" oninput="{ onModuleSelect }">
         <yield/>
         <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
             <option each="{ module in modules }" value="{ module.url }"
