@@ -54,21 +54,26 @@ select {
     display: inline-block;
     padding: 0 1em;
     background-color: #e8ecec;
-    border: 0;
+    border: 1px solid transparent;
     line-height: inherit;
     color: #1b363b;
 }
 
-.button-secondary:hover,
-.button-secondary:focus {
+.button-secondary:hover {
     transition: all 0.2s ease-in;
+    border: 1px solid #1b363b;
     background-color: #ccd5d7;
     cursor: pointer;
 }
 
 .button-secondary.is-active {
+    border: 1px solid #eddb60;
     background-color: #1b363b;
     color: #eddb60;
+}
+
+.button-secondary.is-active:hover {
+    background: #375055;
 }
 
 /* a11y */

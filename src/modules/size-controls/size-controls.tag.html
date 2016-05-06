@@ -1,20 +1,16 @@
-<size-controls class="size-controls">
+<size-controls>
 
     <button each="{ size in opts.sizes }"
-            class="button { 'is-active': size.width == width }"
-            onclick="{ onSelectSize }">
-        { size.name }
-    </button>
-    <button class="button size-controls-button-full { 'is-active': autoWidth }"
-            onclick="{ toggleAutoWidth }">
-        FULL
-    </button>
-    <div class="size-controls-width-input-wrapper">
-        <input class="size-controls-width-input"
-               type="number" min="240" step="10" required="true"
-               value="{ width }"
-               oninput="{ onSizeInput }">
-    </div>
+            class="button-secondary { 'is-active': size.width == width }"
+            onclick="{ onSelectSize }">{ size.name }</button>
+    <button class="button-secondary { 'is-active': autoWidth }"
+            onclick="{ toggleAutoWidth }">FULL</button>
+    <input class="size-controls-input"
+           id="input-width"
+           type="number" min="240" step="10" required="true"
+           value="{ width }"
+           oninput="{ onSizeInput }">
+    <label for="input-width">px</label>
 
     <script>
         var tag = this;

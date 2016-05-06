@@ -9,6 +9,10 @@ app {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.app-header > size-controls {
+    float: right;
+}
+
 .app-content {
     background-color: #444;
 }
