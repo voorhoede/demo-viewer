@@ -1,21 +1,22 @@
-<info-panel class="info-panel" style="height:60%;">
+<info-panel>
 
-    <header class="info-panel-header">
-        <nav class="info-panel-nav">
-            <ul class="info-panel-tabs">
-                <li each="{ section in sections }">
-                    <button class="button { 'is-active': section == activeSection }"
-                            onclick="{ onSelectSection }">
-                        { section }
-                    </button>
-                </li>
-            </ul>
+    <header>
+        <nav class="info-panel-navigation">
+            <button each="{ section in sections }"
+                    class="button-secondary { 'is-active': section == activeSection }"
+                    onclick="{ onSelectSection }">
+                { section }
+            </button>
         </nav>
-
         <div class="info-panel-control">
-            <button class="button icon-align-top" title=""></button>
-            <button class="button icon-clear" title="close info panel"
-                    onclick="{ opts.onClose }"></button>
+            <button class="button-secondary" title="Toggle maximize">
+                <span class="icon-align-top"></span>
+                <span class="a11y-sr-only">Toggle maximize</span>
+            </button>
+            <button class="button-secondary" title="Close" onclick="{ opts.onClose }">
+                <span class="icon-clear"></span>
+                <span class="a11y-sr-only">Close</span>
+            </button>
         </div>
     </header>
 
