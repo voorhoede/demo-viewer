@@ -39,19 +39,7 @@
 }
 
 .icon-launch:before {
-    font-size: 1.4em;
     content: '\e648';
-}
-
-.ie8 .icon-launch {
-    width: 100px;
-}
-
-.ie8 .icon-launch:before {
-    font-family: sans-serif;
-    content: 'New window';
-    font-size: .8em;
-    font-weight: 700;
 }
 
 .icon-label:before {

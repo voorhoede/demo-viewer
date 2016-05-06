@@ -51,6 +51,7 @@ select {
 }
 
 .button-secondary {
+    display: inline-block;
     padding: 0 1em;
     background-color: #e8ecec;
     border: 0;

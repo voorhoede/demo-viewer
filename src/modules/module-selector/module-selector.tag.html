@@ -1,9 +1,8 @@
-<module-selector class="module-selector">
+<module-selector>
 
-    <label class="module-selector-select-wrapper">
+    <label>
         <span class="a11y-sr-only">Module</span>
-
-        <select name="selector" oninput="{ onModuleSelect }">
+        <select class="module-selector-select" name="selector" oninput="{ onModuleSelect }">
             <yield/>
             <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
                 <option each="{ module in modules }" value="{ module.url }"
@@ -12,11 +11,16 @@
                 </option>
             </optgroup>
         </select>
-
     </label>
 
-    <a href="{ activeModule.url }" target="_blank" title="open module in new window"
-       class="module-selector-anchor icon-launch"></a>
+    <a class="module-selector-anchor button-secondary"
+       href="{ activeModule.url }"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Open module in new tab">
+        <span class="icon-launch"></span>
+        <span class="a11y-sr-only">Open in new tab</span>
+    </a>
 
     <script>
         var tag = this;
