@@ -6,12 +6,24 @@ info-panel {
     background-color: #d3d3d3;
 }
 
+.info-panel-header {
+    padding: 0.5rem;
+}
+
 .info-panel-navigation {
     display: inline-block;
 }
 
+.info-panel-navigation > *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
 .info-panel-control {
     float: right;
+}
+
+.info-panel-control > *:not(:last-child) {
+    margin-right: 0.5rem;
 }
 
 .info-panel-section {
