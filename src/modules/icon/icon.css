@@ -23,7 +23,6 @@
 }
 
 .icon-info-outline:before {
-    font-size: 1.4em;
     content: '\e639';
 }
 
@@ -34,7 +33,6 @@
 .ie8 .icon-info-outline:before {
     font-family: sans-serif;
     content: 'Info';
-    font-size: .8em;
     font-weight: 700;
 }
 
@@ -43,7 +41,6 @@
 }
 
 .icon-label:before {
-    font-size: 1.4em;
     content: '\e887';
 }
 
@@ -54,32 +51,26 @@
 .ie8 .icon-label:before {
     font-family: sans-serif;
     content: 'Annotations';
-    font-size: .8em;
     font-weight: 700;
 }
 
 .icon-chevron-left:before {
-    font-size: 1.4em;
     content: '\e8a7';
 }
 
 .icon-expand-more:before {
-    font-size: 1.4em;
     content: '\e8ab';
 }
 
 .icon-view:before {
-    font-size: 1.4em;
     content: '\e699';
 }
 
 .icon-component:before {
-    font-size: 1.4em;
     content: '\e628';
 }
 
 .icon-align-top:before {
-    font-size: 1.4em;
     content: '\e7a7';
 }
 
@@ -90,12 +81,10 @@
 .ie8 .icon-align-top:before {
     font-family: sans-serif;
     content: 'Expand';
-    font-size: .8em;
     font-weight: 700;
 }
 
 .icon-align-bottom:before {
-    font-size: 1.4em;
     content: '\e7a5';
 }
 
@@ -106,12 +95,10 @@
 .ie8 .icon-align-bottom:before {
     font-family: sans-serif;
     content: 'Collapse';
-    font-size: .8em;
     font-weight: 700;
 }
 
 .icon-clear:before {
-    font-size: 1.4em;
     content: '\e704';
 }
 
@@ -122,16 +109,13 @@
 .ie8 .icon-clear:before {
     font-family: sans-serif;
     content: 'Close';
-    font-size: .8em;
     font-weight: 700;
 }
 
 .icon-align-right:before {
-    font-size: 1.4em;
     content: '\e7ca';
 }
 
 .icon-align-left:before {
-    font-size: 1.4em;
     content: '\e7c5';
 }
