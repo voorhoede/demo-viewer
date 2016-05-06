@@ -1,5 +1,6 @@
 size-controls .button-secondary {
     display: none;
+    margin-right: 0.5rem;
 }
 
 .size-controls-fieldset {
@@ -27,7 +28,7 @@ size-controls .button-secondary {
     }
 }
 
-@media screen and (min-width: 875px) {
+@media screen and (min-width: 900px) {
     size-controls .button-secondary {
         display: inline-block;
     }

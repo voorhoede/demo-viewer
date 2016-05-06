@@ -10,6 +10,13 @@ select {
     margin: 0;
 }
 
+/* firefox button height issue */
+/* https://davidwalsh.name/firefox-buttons */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 fieldset {
     /* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
     border: 0;
@@ -60,6 +67,7 @@ fieldset {
 
 .button-secondary {
     display: inline-block;
+    box-sizing: border-box;
     padding: 0 1em;
     background-color: #e8ecec;
     border: 1px solid transparent;
@@ -76,7 +84,6 @@ fieldset {
 }
 
 .button-secondary.is-active {
-    border: 1px solid #eddb60;
     background-color: #1b363b;
     color: #eddb60;
 }

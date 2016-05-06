@@ -4,11 +4,14 @@ app {
 }
 
 .app-header {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 0.5rem;
     background-color: #d3d3d3;
     border-bottom: 1px solid #d0d0d0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.app-header > *:not(:last-child) {
+    margin-right: 0.5rem;
 }
 
 .app-header > size-controls {

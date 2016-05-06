@@ -1,5 +1,6 @@
 .module-selector-select {
     height: 50px; /* line-height has no effect on replaced elements */
+    margin-right: 0.5rem;
     background-color: #e8ecec;
     border: 1px solid transparent;
 }
