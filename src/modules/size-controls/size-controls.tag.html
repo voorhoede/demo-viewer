@@ -1,9 +1,9 @@
 <size-controls>
 
     <button each="{ size in opts.sizes }"
-            class="button-secondary { 'is-active': size.width == width }"
+            class="button { 'is-active': size.width == width }"
             onclick="{ onSelectSize }">{ size.name }</button>
-    <button class="button-secondary { 'is-active': autoWidth }"
+    <button class="button { 'is-active': autoWidth }"
             onclick="{ toggleAutoWidth }">FULL</button>
     <fieldset class="size-controls-fieldset">
         <input class="size-controls-input"

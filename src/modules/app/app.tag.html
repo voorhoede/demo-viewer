@@ -4,14 +4,14 @@
         <module-selector modules="{ opts.modules }" default-module="{ opts.defaultModule }" on-select="{ setModule }">
             <yield/>
         </module-selector>
-        <button class="button-secondary { 'is-active': infoIsOpen }"
+        <button class="button { 'is-active': infoIsOpen }"
                 title="Toggle source"
                 disabled="{ !activeModule.info }"
                 onclick="{ toggleInfo }">
             <span class="icon-info-outline"></span>
             <span class="a11y-sr-only">Toggle source</span>
         </button>
-        <button class="button-secondary"
+        <button class="button"
                 title="Toggle annotations"
                 disabled>
             <span class="icon-label"></span>

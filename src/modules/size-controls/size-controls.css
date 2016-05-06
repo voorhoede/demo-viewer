@@ -1,4 +1,4 @@
-size-controls .button-secondary {
+size-controls .button {
     display: none;
     margin-right: 0.5rem;
 }
@@ -29,7 +29,7 @@ size-controls .button-secondary {
 }
 
 @media screen and (min-width: 900px) {
-    size-controls .button-secondary {
+    size-controls .button {
         display: inline-block;
     }
 }

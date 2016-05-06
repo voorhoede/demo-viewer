@@ -28,44 +28,6 @@ fieldset {
 /* buttons */
 
 .button {
-    background-color: #e8ecec;
-    color: #1b363b;
-    font-size: 1em;
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    vertical-align: top;
-}
-
-.button:before {
-    font-size: 1.4em;
-}
-
-.button:hover {
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    background-color: #ccd5d7;
-    cursor: pointer;
-}
-
-.button:focus {
-    outline: 0;
-}
-
-.button.is-active {
-    background-color: #1b363b;
-    color: #eddb60;
-}
-
-.button.is-active:hover {
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    color: #ccd5d7;
-}
-
-.button-secondary {
     display: inline-block;
     box-sizing: border-box;
     padding: 0 1em;
@@ -76,19 +38,19 @@ fieldset {
     vertical-align: top;
 }
 
-.button-secondary:hover {
+.button:hover {
     transition: all 0.2s ease-in;
     border: 1px solid #1b363b;
     background-color: #ccd5d7;
     cursor: pointer;
 }
 
-.button-secondary.is-active {
+.button.is-active {
     background-color: #1b363b;
     color: #eddb60;
 }
 
-.button-secondary.is-active:hover {
+.button.is-active:hover {
     background: #375055;
 }
 
