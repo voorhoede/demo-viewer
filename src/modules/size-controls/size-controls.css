@@ -2,9 +2,14 @@ size-controls .button-secondary {
     display: none;
 }
 
+.size-controls-fieldset {
+    display: none;
+}
+
 .size-controls-input {
-    height: 48px; /* input ignores line-height */
-    width: 4em;
+    height: 50px; /* line-height has no effect on replaced elements */
+    width: 6em;
+    box-sizing: border-box;
     padding: 0 1em;
     background: #e8ecec;
     border: 1px solid transparent;
@@ -16,7 +21,13 @@ size-controls .button-secondary {
     background-color: #ccd5d7;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 525px) {
+    .size-controls-fieldset {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 875px) {
     size-controls .button-secondary {
         display: inline-block;
     }

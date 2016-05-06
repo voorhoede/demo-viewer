@@ -1,8 +1,16 @@
 .module-selector-select {
-    height: 48px; /* select ignores line-height */
-    padding-right: 1em;
-    padding-left: 1em;
-    background-color: inherit;
-    border: 0;
-    border-radius: 0;
+    height: 50px; /* line-height has no effect on replaced elements */
+    background-color: #e8ecec;
+    border: 1px solid transparent;
+}
+
+.module-selector-select:hover {
+    transition: all 0.2s ease-in;
+    border: 1px solid #1b363b;
+    background-color: #ccd5d7;
+    cursor: pointer;
+}
+
+.module-selector-anchor {
+   vertical-align: top;
 }

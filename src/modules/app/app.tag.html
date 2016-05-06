@@ -4,7 +4,6 @@
         <module-selector modules="{ opts.modules }" default-module="{ opts.defaultModule }" on-select="{ setModule }">
             <yield/>
         </module-selector>
-
         <button class="button-secondary { 'is-active': infoIsOpen }"
                 title="Toggle source"
                 disabled="{ !activeModule.info }"
