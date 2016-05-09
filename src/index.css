@@ -1,1 +1,5 @@
 @import 'modules/app/app.css';
+
+body {
+    margin: 0;
+}
