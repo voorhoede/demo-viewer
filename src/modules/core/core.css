@@ -1,3 +1,15 @@
+/* variables */
+
+:root {
+    --default-margin: 0.5rem;
+    --color-grey-light: #e8ecec;
+    --color-grey: #d3d3d3;
+    --color-grey-dark: #ccd5d7;
+    --color-yellow: #eddb60;
+    --color-blue: #375055;
+    --color-blue-dark: #1b363b;
+}
+
 /* css reset */
 
 button,
@@ -31,27 +43,27 @@ fieldset {
     display: inline-block;
     box-sizing: border-box;
     padding: 0 1em;
-    background-color: #e8ecec;
+    background-color: var(--color-grey-light);
     border: 1px solid transparent;
     line-height: inherit;
-    color: #1b363b;
+    color: var(--color-blue-dark);
     vertical-align: top;
 }
 
 .button:hover {
     transition: all 0.2s ease-in;
-    border: 1px solid #1b363b;
-    background-color: #ccd5d7;
+    border: 1px solid var(--color-blue-dark);
+    background-color: var(--color-grey-dark);
     cursor: pointer;
 }
 
 .button.is-active {
-    background-color: #1b363b;
-    color: #eddb60;
+    background-color: var(--color-blue-dark);
+    color: var(--color-yellow);
 }
 
 .button.is-active:hover {
-    background: #375055;
+    background: var(--color-blue);
 }
 
 /* a11y */

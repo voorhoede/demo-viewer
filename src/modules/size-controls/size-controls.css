@@ -1,6 +1,6 @@
 size-controls .button {
     display: none;
-    margin-right: 0.5rem;
+    margin-right: var(--default-margin);
 }
 
 .size-controls-fieldset {
@@ -12,14 +12,14 @@ size-controls .button {
     width: 6em;
     box-sizing: border-box;
     padding: 0 1em;
-    background: #e8ecec;
+    background: var(--color-grey-light);
     border: 1px solid transparent;
 }
 
 .size-controls-input:hover {
     transition: all 0.2s ease-in;
-    border: 1px solid #1b363b;
-    background-color: #ccd5d7;
+    border: 1px solid var(--color-blue-dark);
+    background-color: var(--color-grey);
 }
 
 @media screen and (min-width: 525px) {

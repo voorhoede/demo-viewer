@@ -3,11 +3,11 @@ info-panel {
     bottom: 0;
     width: 100%;
     height: 60%;
-    background-color: #d3d3d3;
+    background-color: var(--color-grey);
 }
 
 .info-panel-header {
-    padding: 0.5rem;
+    padding: var(--default-margin);
 }
 
 .info-panel-navigation {
@@ -15,7 +15,7 @@ info-panel {
 }
 
 .info-panel-navigation > *:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right: var(--default-margin);
 }
 
 .info-panel-control {
@@ -23,7 +23,7 @@ info-panel {
 }
 
 .info-panel-control > *:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right: var(--default-margin);
 }
 
 .info-panel-section {
