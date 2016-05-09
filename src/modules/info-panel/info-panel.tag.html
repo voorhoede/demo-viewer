@@ -1,9 +1,12 @@
 <info-panel>
 
     <header class="info-panel-header">
-        <nav class="info-panel-navigation">
+        <nav class="info-panel-navigation" role="tablist">
             <button each="{ section in sections }"
                     class="button { 'is-active': section == activeSection }"
+                    role="tab"
+                    aria-controls="info-content"
+                    aria-selected="{ section == activeSection }"
                     onclick="{ onSelectSection }">
                 { section }
             </button>
@@ -20,9 +23,11 @@
         </div>
     </header>
 
-    <iframe if="{ activeSection }" class="info-panel-section"
+    <iframe if="{ activeSection }" id="info-content" class="info-panel-section"
             src="{ sections[activeSection] }"
             width="100%"
+            role="tabpanel"
+            aria-labelledby="{ activeSection }"
             ></iframe>
 
     <script>
