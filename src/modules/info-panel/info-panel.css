@@ -38,7 +38,3 @@ info-panel {
 .info-panel-section {
     height: 100%;
 }
-
-.info-panel-section code {
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-}
