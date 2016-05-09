@@ -1,0 +1,22 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+
+.module-selector-select {
+    height: 42px; /* line-height has no effect on replaced elements */
+    background-color: var(--color-grey-light);
+    border: 1px solid transparent;
+}
+
+.module-selector-select:hover {
+    transition: all 0.2s ease-in;
+    border: 1px solid #1b363b;
+    background-color: #ccd5d7;
+    cursor: pointer;
+}
+
+module-selector .button {
+    width: 42px;
+    padding: 0;
+    margin-left: var(--default-margin);
+    vertical-align: top;
+}

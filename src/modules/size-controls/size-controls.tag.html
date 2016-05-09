@@ -1,20 +1,18 @@
-<size-controls class="viewer-size-controls">
+<size-controls>
 
     <button each="{ size in opts.sizes }"
-            class="viewer-button { 'is-active': size.width == width }"
-            onclick="{ onSelectSize }">
-        { size.name }
-    </button>
-    <button class="viewer-button viewer-button-full { 'is-active': autoWidth }"
-            onclick="{ toggleAutoWidth }">
-        FULL
-    </button>
-    <div class="viewer-width-input-wrapper">
-        <input class="viewer-width-input"
+            class="button { 'is-active': size.width == width }"
+            onclick="{ onSelectSize }">{ size.name }</button>
+    <button class="button { 'is-active': autoWidth }"
+            onclick="{ toggleAutoWidth }">FULL</button>
+    <fieldset class="size-controls-fieldset">
+        <input class="size-controls-input"
+               id="input-width"
                type="number" min="240" step="10" required="true"
                value="{ width }"
                oninput="{ onSizeInput }">
-    </div>
+        <label for="input-width">px</label>
+    </fieldset>
 
     <script>
         var tag = this;
