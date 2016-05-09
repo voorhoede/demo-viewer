@@ -6,10 +6,6 @@ info-panel {
     background-color: var(--color-grey);
 }
 
-.info-panel-header {
-    padding: var(--default-margin);
-}
-
 .info-panel-navigation {
     display: inline-block;
 }
