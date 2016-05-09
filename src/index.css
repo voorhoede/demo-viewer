@@ -1,7 +1,1 @@
-/* include component styles alphabetically */
 @import 'modules/app/app.css';
-@import 'modules/core/core.css';
-@import 'modules/icon/icon.css';
-@import 'modules/info-panel/info-panel.css';
-@import 'modules/module-selector/module-selector.css';
-@import 'modules/size-controls/size-controls.css';

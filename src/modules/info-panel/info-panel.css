@@ -1,3 +1,6 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+
 info-panel {
     position: fixed;
     bottom: 0;

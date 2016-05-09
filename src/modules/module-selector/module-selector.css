@@ -1,3 +1,6 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+
 .module-selector-select {
     height: 50px; /* line-height has no effect on replaced elements */
     margin-right: var(--default-margin);

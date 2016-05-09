@@ -1,3 +1,9 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+@import '../info-panel/info-panel.css';
+@import '../module-selector/module-selector.css';
+@import '../size-controls/size-controls.css';
+
 app {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 3;
