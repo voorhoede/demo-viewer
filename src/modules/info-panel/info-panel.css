@@ -9,6 +9,11 @@ info-panel {
     background-color: var(--color-grey);
 }
 
+.info-panel-header {
+    padding: 0.25em;
+    line-height: 2;
+}
+
 .info-panel-navigation {
     display: inline-block;
 }
@@ -19,6 +24,11 @@ info-panel {
 
 .info-panel-control {
     float: right;
+}
+
+.info-panel-control .button {
+    width: 42px;
+    padding: 0;
 }
 
 .info-panel-control > *:not(:last-child) {

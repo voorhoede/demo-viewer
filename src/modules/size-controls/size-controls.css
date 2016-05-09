@@ -10,7 +10,7 @@ size-controls .button {
 }
 
 .size-controls-input {
-    height: 50px; /* line-height has no effect on replaced elements */
+    height: 42px; /* line-height has no effect on replaced elements */
     width: 6em;
     box-sizing: border-box;
     padding: 0 1em;

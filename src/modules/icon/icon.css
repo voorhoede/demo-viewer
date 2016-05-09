@@ -21,6 +21,8 @@
     font-weight: normal;
     font-style: normal;
     line-height: normal;
+    font-size: 1.4rem;
+    vertical-align: sub; /*  ¯\_(ツ)_/¯ */
 }
 
 .icon-info-outline:before {

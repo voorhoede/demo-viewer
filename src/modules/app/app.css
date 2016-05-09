@@ -6,10 +6,11 @@
 
 app {
     font-family: Helvetica, Arial, sans-serif;
-    line-height: 3;
+    line-height: 2.5;
 }
 
 .app-header {
+    padding: 0 0.5em;
     background-color: var(--color-grey);
     border-bottom: 1px solid var(--color-grey-dark);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -21,6 +22,11 @@ app {
 
 .app-header > size-controls {
     float: right;
+}
+
+.app-header .button {
+    width: 42px;
+    padding: 0;
 }
 
 main {
