@@ -16,8 +16,8 @@ app {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.app-header > *:not(:last-child) {
-    margin-right: var(--default-margin);
+.app-header > * + * {
+    margin-left: var(--default-margin);
 }
 
 .app-header > size-controls {

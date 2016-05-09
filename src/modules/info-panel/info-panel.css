@@ -18,8 +18,8 @@ info-panel {
     display: inline-block;
 }
 
-.info-panel-navigation > *:not(:last-child) {
-    margin-right: var(--default-margin);
+.info-panel-navigation > * + * {
+    margin-left: var(--default-margin);
 }
 
 .info-panel-control {
@@ -31,8 +31,8 @@ info-panel {
     padding: 0;
 }
 
-.info-panel-control > *:not(:last-child) {
-    margin-right: var(--default-margin);
+.info-panel-control > * + * {
+    margin-left: var(--default-margin);
 }
 
 .info-panel-section {

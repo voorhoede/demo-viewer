@@ -3,7 +3,6 @@
 
 .module-selector-select {
     height: 42px; /* line-height has no effect on replaced elements */
-    margin-right: var(--default-margin);
     background-color: var(--color-grey-light);
     border: 1px solid transparent;
 }
@@ -18,5 +17,6 @@
 module-selector .button {
     width: 42px;
     padding: 0;
+    margin-left: var(--default-margin);
     vertical-align: top;
 }

@@ -2,7 +2,10 @@
 
 size-controls .button {
     display: none;
-    margin-right: var(--default-margin);
+}
+
+size-controls > * + * {
+    margin-left: var(--default-margin);
 }
 
 .size-controls-fieldset {
