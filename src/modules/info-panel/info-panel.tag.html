@@ -16,7 +16,7 @@
                 <span class="icon-align-top"></span>
                 <span class="a11y-sr-only">Toggle maximize</span>
             </button>
-            <button class="button" title="Close" onclick="{ opts.onClose }">
+            <button class="button" title="Close" onclick="{ onClose }">
                 <span class="icon-clear"></span>
                 <span class="a11y-sr-only">Close</span>
             </button>
@@ -37,6 +37,7 @@
         opts.sections = {};
         tag.onSelectSection = onSelectSection;
         tag.onMaximize = onMaximize;
+        tag.onClose = onClose;
         tag.on('update', onUpdate);
 
         function onSelectSection(event) {
@@ -52,6 +53,11 @@
 
         function onMaximize() {
             tag.isMaximized = !tag.isMaximized;
+        }
+
+        function onClose() {
+            opts.onClose();
+            tag.isMaximized = false;
         }
 
     </script>
