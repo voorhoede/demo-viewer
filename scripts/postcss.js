@@ -12,7 +12,7 @@ postcss([
         to: 'index.css'
     })
     .then(function (result) {
-        fs.writeFileSync('dist/index.css', result.css);
+        fs.writeFileSync('dist/demo-viewer.css', result.css);
         if (result.map) {
             fs.writeFileSync('dist/index.css.map', result.map);
         }
