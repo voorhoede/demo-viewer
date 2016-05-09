@@ -15,8 +15,7 @@
 .icon-align-bottom,
 .icon-clear,
 .icon-align-right,
-.icon-align-left,
-:not(.ie8) .viewer-header-select-wrapper:before {
+.icon-align-left {
     font-family: 'icon-font';
     font-weight: normal;
     font-style: normal;
@@ -29,16 +28,6 @@
     content: '\e639';
 }
 
-.ie8 .icon-info-outline {
-    width: 50px;
-}
-
-.ie8 .icon-info-outline:before {
-    font-family: sans-serif;
-    content: 'Info';
-    font-weight: 700;
-}
-
 .icon-launch:before {
     content: '\e648';
 }
@@ -47,15 +36,6 @@
     content: '\e887';
 }
 
-.ie8 .icon-label {
-    width: 95px;
-}
-
-.ie8 .icon-label:before {
-    font-family: sans-serif;
-    content: 'Annotations';
-    font-weight: 700;
-}
 
 .icon-chevron-left:before {
     content: '\e8a7';
@@ -77,42 +57,8 @@
     content: '\e7a7';
 }
 
-.ie8 .icon-align-top {
-    width: 70px !important;
-}
-
-.ie8 .icon-align-top:before {
-    font-family: sans-serif;
-    content: 'Expand';
-    font-weight: 700;
-}
-
-.icon-align-bottom:before {
-    content: '\e7a5';
-}
-
-.ie8 .icon-align-bottom {
-    width: 69px !important;
-}
-
-.ie8 .icon-align-bottom:before {
-    font-family: sans-serif;
-    content: 'Collapse';
-    font-weight: 700;
-}
-
 .icon-clear:before {
     content: '\e704';
-}
-
-.ie8 .icon-clear {
-    width: 50px !important;
-}
-
-.ie8 .icon-clear:before {
-    font-family: sans-serif;
-    content: 'Close';
-    font-weight: 700;
 }
 
 .icon-align-right:before {
