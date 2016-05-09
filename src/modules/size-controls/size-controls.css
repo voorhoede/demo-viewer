@@ -9,7 +9,7 @@ size-controls > * + * {
 }
 
 .size-controls-fieldset {
-    display: none;
+    display: inline-block;
 }
 
 .size-controls-input {
@@ -25,12 +25,6 @@ size-controls > * + * {
     transition: all 0.2s ease-in;
     border: 1px solid var(--color-blue-dark);
     background-color: var(--color-grey);
-}
-
-@media screen and (min-width: 525px) {
-    .size-controls-fieldset {
-        display: inline-block;
-    }
 }
 
 @media screen and (min-width: 900px) {

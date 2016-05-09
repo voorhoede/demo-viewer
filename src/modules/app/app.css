@@ -22,6 +22,7 @@ app {
 
 .app-header > size-controls {
     float: right;
+    display: none;
 }
 
 .app-header .button {
@@ -35,4 +36,10 @@ main {
 
 .app-frame {
     border-right: 1px solid #ccc;
+}
+
+@media screen and (min-width: 525px) {
+    .app-header size-controls {
+        display: inline-block;
+    }
 }
