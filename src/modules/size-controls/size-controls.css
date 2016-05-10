@@ -14,13 +14,13 @@ size-controls > * + * {
 
 size-controls .button:last-of-type {
     font-size: 0.8em;
-    height: 2.625rem;
+    height: 2.5rem;
 }
 
 .size-controls-fieldset {
     /* for absolute position of .size-controls-label */
     position: relative;
-    height: 2.625rem;
+    height: 2.5rem;
 }
 
 .size-controls-label {
@@ -33,7 +33,7 @@ size-controls .button:last-of-type {
 }
 
 .size-controls-input {
-    height: 2.625rem; /* line-height has no effect on replaced elements */
+    height: 2.5rem; /* line-height has no effect on replaced elements */
     width: 6.5rem;
     box-sizing: border-box;
     padding: 0 1.75rem 0 1rem;

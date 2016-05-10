@@ -2,13 +2,13 @@
 @import '../icon/icon.css';
 
 .module-selector-select {
-    height: 2.625rem; /* line-height has no effect on replaced elements */
+    height: 2.5rem; /* line-height has no effect on replaced elements */
     appearance: none;
     background-color: var(--color-grey-light);
     border: 1px solid transparent;
     border-radius: 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    padding-right: 2.625rem; /* make space for caret icon */
+    padding-right: 2.5rem; /* make space for caret icon */
     padding-left: 1rem;
 }
 
@@ -20,7 +20,7 @@
 
 .module-selector-label {
     display: inline-block;
-    height: 2.625rem;
+    height: 2.5rem;
     position: relative; /* for absolute position of caret */
     background-color: #ccd5d7;
     cursor: pointer;
@@ -39,7 +39,7 @@
 }
 
 module-selector .button {
-    width: 2.625rem;
+    width: 2.5rem;
     padding: 0;
     margin-left: var(--default-margin);
     vertical-align: top;

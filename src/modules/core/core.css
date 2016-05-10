@@ -61,6 +61,7 @@ textarea:focus {
 
 .button {
     display: inline-block;
+    height: 2.5rem;
     box-sizing: border-box;
     padding: 0 1em;
     background-color: var(--color-grey-light);
