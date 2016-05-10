@@ -41,5 +41,5 @@ info-panel {
 }
 
 .info-panel-section {
-    height: 100%;
+    height: calc(100% - 2rem);
 }
