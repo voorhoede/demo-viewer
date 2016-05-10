@@ -10,7 +10,10 @@ Contributions should be aimed towards this and / or improve the development work
 For new additions or changes to the modules, create a branch and submit a Pull Request.
 Only add/change 1 module per Pull Request.
 
-### Directory structure
+### Structure
+
+The demo viewer is composed out of small modules which each have a single purpose (e.g. "select what to preview").
+For the module's presentation logic [RiotJS](http://riotjs.com/) tags are used  (in `*.tag.html` file). For modularised and parametrised styling we use [PostCSS](http://postcss.org/).
 
 Each module must have the following structure:
 
