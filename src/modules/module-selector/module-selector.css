@@ -6,7 +6,7 @@ module-selector > * {
 }
 
 .module-selector-select {
-    height: 42px; /* line-height has no effect on replaced elements */
+    height: 2.625rem; /* line-height has no effect on replaced elements */
     background-color: var(--color-grey-light);
     border: 1px solid transparent;
 }
@@ -19,7 +19,7 @@ module-selector > * {
 }
 
 module-selector .button {
-    width: 42px;
+    width: 2.625rem;
     padding: 0;
     margin-left: var(--default-margin);
     vertical-align: top;

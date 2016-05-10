@@ -14,7 +14,7 @@ size-controls > * + * {
 
 size-controls .button:last-of-type {
     font-size: 0.8em;
-    height: 42px;
+    height: 2.625rem;
 }
 
 .size-controls-fieldset {
