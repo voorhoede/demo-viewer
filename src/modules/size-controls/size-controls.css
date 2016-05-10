@@ -34,7 +34,7 @@ size-controls .button:last-of-type {
 
 .size-controls-input {
     height: 2.625rem; /* line-height has no effect on replaced elements */
-    width: 6rem;
+    width: 6.5rem;
     box-sizing: border-box;
     padding: 0 1.75rem 0 1rem;
     background: var(--color-grey-light);
