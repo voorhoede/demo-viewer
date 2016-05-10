@@ -8,6 +8,11 @@ size-controls > * + * {
     margin-left: var(--default-margin);
 }
 
+size-controls .button:last-of-type {
+    font-size: 0.8em;
+    height: 42px;
+}
+
 .size-controls-fieldset {
     display: inline-block;
 }
