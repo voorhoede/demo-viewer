@@ -67,7 +67,6 @@ textarea:focus {
 
 .button:hover {
     transition: all 0.2s ease-in;
-    border: 1px solid var(--color-blue-dark);
     background-color: var(--color-grey-dark);
     cursor: pointer;
 }
