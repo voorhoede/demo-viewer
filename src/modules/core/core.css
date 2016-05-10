@@ -2,6 +2,7 @@
 
 :root {
     --default-margin: 0.5rem;
+    --color-grey-lightest: #f3f5f5;
     --color-grey-light: #e8ecec;
     --color-grey: #d3d3d3;
     --color-grey-dark: #ccd5d7;

@@ -39,13 +39,13 @@ size-controls .button:last-of-type {
     padding: 0 1.75rem 0 1rem;
     background: var(--color-grey-light);
     border: 1px solid transparent;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     font-weight: bold;
 }
 
 .size-controls-input:hover {
     transition: all 0.2s ease-in;
-    border: 1px solid var(--color-blue-dark);
-    background-color: var(--color-grey);
+    background-color: var(--color-grey-dark);
 }
 
 @media screen and (min-width: 900px) {

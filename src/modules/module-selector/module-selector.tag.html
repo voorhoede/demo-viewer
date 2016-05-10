@@ -1,15 +1,18 @@
 <module-selector>
 
-    <label for="selector" class="a11y-sr-only">Module</label>
-    <select class="module-selector-select" id="selector" name="selector" oninput="{ onModuleSelect }">
-        <yield/>
-        <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
-            <option each="{ module in modules }" value="{ module.url }"
-                    selected="{ module.url == activeModule.url }">
-                { module.name }
-            </option>
-        </optgroup>
-    </select>
+    <label class="module-selector-label" for="selector">
+        <span class="a11y-sr-only">Module</span>
+        <select class="module-selector-select" id="selector" name="selector" oninput="{ onModuleSelect }">
+            <yield/>
+            <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
+                <option each="{ module in modules }" value="{ module.url }"
+                        selected="{ module.url == activeModule.url }">
+                    { module.name }
+                </option>
+            </optgroup>
+        </select>
+        <span class="icon-expand-more"></span>
+    </label>
     <a class="button"
        href="{ activeModule.url }"
        target="_blank"

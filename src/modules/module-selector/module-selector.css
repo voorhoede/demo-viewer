@@ -1,21 +1,41 @@
 @import '../core/core.css';
 @import '../icon/icon.css';
 
-module-selector > * {
-    float: left;
-}
-
 .module-selector-select {
     height: 2.625rem; /* line-height has no effect on replaced elements */
+    appearance: none;
     background-color: var(--color-grey-light);
     border: 1px solid transparent;
+    border-radius: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    padding-right: 2.625rem; /* make space for caret icon */
+    padding-left: 1rem;
 }
 
 .module-selector-select:hover {
     transition: all 0.2s ease-in;
-    border: 1px solid #1b363b;
+    background-color: var(--color-grey-dark);
+    cursor: pointer;
+}
+
+.module-selector-label {
+    display: inline-block;
+    height: 2.625rem;
+    position: relative; /* for absolute position of caret */
     background-color: #ccd5d7;
     cursor: pointer;
+}
+
+.module-selector-label .icon-expand-more {
+    pointer-events: none;
+    position: absolute;
+    height: 2.375rem;
+    width: 2.5rem;
+    top: 0.125rem;
+    right: 0;
+    text-align: center;
+    line-height: 2.375rem;
+    border-left: 3px solid var(--color-grey-lightest);
 }
 
 module-selector .button {
