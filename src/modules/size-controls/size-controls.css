@@ -1,5 +1,9 @@
 @import '../core/core.css';
 
+size-controls > * {
+    float: left;
+}
+
 size-controls .button {
     display: none;
 }
@@ -11,10 +15,6 @@ size-controls > * + * {
 size-controls .button:last-of-type {
     font-size: 0.8em;
     height: 42px;
-}
-
-.size-controls-fieldset {
-    display: inline-block;
 }
 
 .size-controls-input {

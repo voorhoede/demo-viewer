@@ -48,6 +48,14 @@ textarea:focus {
     outline: 2px solid var(--color-blue-lighter);
 }
 
+/* clearfix */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* buttons */
 
 .button {

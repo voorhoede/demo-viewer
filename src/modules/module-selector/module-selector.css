@@ -1,6 +1,10 @@
 @import '../core/core.css';
 @import '../icon/icon.css';
 
+module-selector > * {
+    float: left;
+}
+
 .module-selector-select {
     height: 42px; /* line-height has no effect on replaced elements */
     background-color: var(--color-grey-light);

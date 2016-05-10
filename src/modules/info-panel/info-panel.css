@@ -15,7 +15,11 @@ info-panel {
 }
 
 .info-panel-navigation {
-    display: inline-block;
+    float: left;
+}
+
+.info-panel-navigation > * {
+    float: left;
 }
 
 .info-panel-navigation > * + * {
@@ -28,6 +32,7 @@ info-panel {
 
 .info-panel-control .button {
     width: 42px;
+    float: left;
     padding: 0;
 }
 
