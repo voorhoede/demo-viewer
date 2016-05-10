@@ -17,13 +17,29 @@ size-controls .button:last-of-type {
     height: 42px;
 }
 
+.size-controls-fieldset {
+    /* for absolute position of .size-controls-label */
+    position: relative;
+    height: 2.625rem;
+}
+
+.size-controls-label {
+    position: absolute;
+    font-weight: bold;
+    margin: auto 0;
+    top: 0;
+    right: 0.5em;
+    bottom: 0;
+}
+
 .size-controls-input {
-    height: 42px; /* line-height has no effect on replaced elements */
-    width: 6em;
+    height: 2.625rem; /* line-height has no effect on replaced elements */
+    width: 6rem;
     box-sizing: border-box;
-    padding: 0 1em;
+    padding: 0 1.75rem 0 1rem;
     background: var(--color-grey-light);
     border: 1px solid transparent;
+    font-weight: bold;
 }
 
 .size-controls-input:hover {

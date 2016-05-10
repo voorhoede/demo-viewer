@@ -6,7 +6,6 @@
 
 app {
     font-family: Arial, sans-serif;
-    line-height: 2.5;
 }
 
 .app-header {
@@ -14,6 +13,7 @@ app {
     background-color: var(--color-grey);
     border-bottom: 1px solid var(--color-grey-dark);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    line-height: 2.5;
 }
 
 .app-header > * {
