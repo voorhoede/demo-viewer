@@ -1,0 +1,49 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+@import '../info-panel/info-panel.css';
+@import '../module-selector/module-selector.css';
+@import '../size-controls/size-controls.css';
+
+app {
+    font-family: Arial, sans-serif;
+}
+
+.app-header {
+    padding: 0 0.5em;
+    background-color: var(--color-grey);
+    border-bottom: 1px solid var(--color-grey-dark);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    line-height: 2.5;
+}
+
+.app-header > * {
+    float: left;
+}
+
+.app-header > * + * {
+    margin-left: var(--default-margin);
+}
+
+.app-header > size-controls {
+    float: right;
+    display: none;
+}
+
+.app-header .button {
+    width: 2.5rem;
+    padding: 0;
+}
+
+main {
+    background-color: #444;
+}
+
+.app-frame {
+    border-right: 1px solid #ccc;
+}
+
+@media screen and (min-width: 525px) {
+    .app-header size-controls {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,115 @@
+/* variables */
+
+:root {
+    --default-margin: 0.25rem;
+    --color-grey-lightest: #f3f5f5;
+    --color-grey-light: #e8ecec;
+    --color-grey: #d3d3d3;
+    --color-grey-dark: #ccd5d7;
+    --color-yellow: #eddb60;
+    --color-blue-lighter: #61b7ff;
+    --color-blue: #375055;
+    --color-blue-dark: #1b363b;
+}
+
+/* css reset */
+
+button,
+input,
+optgroup,
+select {
+    /* Use parent font-size (instead of browser default 11px) */
+    font-size: inherit;
+    /* Remove the margin in Firefox and Safari */
+    margin: 0;
+}
+
+/* firefox button height issue */
+/* https://davidwalsh.name/firefox-buttons */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+fieldset {
+    /* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+/* focus styles */
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-blue-lighter);
+}
+
+/* clearfix */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* buttons */
+
+.button {
+    display: inline-block;
+    height: 2.5rem;
+    box-sizing: border-box;
+    padding: 0 1em;
+    background-color: var(--color-grey-light);
+    border: 1px solid transparent;
+    line-height: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-blue-dark);
+    vertical-align: top;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transition: all 0.2s ease-in;
+    background-color: var(--color-grey-dark);
+    cursor: pointer;
+}
+
+.button.is-active {
+    background-color: var(--color-blue-dark);
+    color: var(--color-yellow);
+}
+
+.button.is-active:hover {
+    color: var(--color-grey-dark);
+}
+
+/* a11y */
+
+.a11y-sr-only,
+.a11y-kb-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.a11y-kb-only:active,
+.a11y-kb-only:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
