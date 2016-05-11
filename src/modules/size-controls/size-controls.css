@@ -41,6 +41,7 @@ size-controls .button:last-of-type {
     border: 1px solid transparent;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     font-weight: bold;
+    text-align: right;
 }
 
 .size-controls-input:hover {
