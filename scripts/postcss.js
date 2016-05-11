@@ -14,6 +14,6 @@ postcss([
     .then(function (result) {
         fs.writeFileSync('dist/demo-viewer.css', result.css);
         if (result.map) {
-            fs.writeFileSync('dist/index.css.map', result.map);
+            fs.writeFileSync('dist/demo-viewer.css.map', result.map);
         }
     });

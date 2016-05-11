@@ -1,0 +1,56 @@
+@import '../core/core.css';
+
+size-controls > * {
+    float: left;
+}
+
+size-controls .button {
+    display: none;
+}
+
+size-controls > * + * {
+    margin-left: var(--default-margin);
+}
+
+size-controls .button:last-of-type {
+    font-size: 0.8em;
+    height: 2.5rem;
+}
+
+.size-controls-fieldset {
+    /* for absolute position of .size-controls-label */
+    position: relative;
+    height: 2.5rem;
+}
+
+.size-controls-label {
+    position: absolute;
+    font-weight: bold;
+    margin: auto 0;
+    top: 0;
+    right: 0.5em;
+    bottom: 0;
+}
+
+.size-controls-input {
+    height: 2.5rem; /* line-height has no effect on replaced elements */
+    width: 6.5rem;
+    box-sizing: border-box;
+    padding: 0 1.75rem 0 1rem;
+    background: var(--color-grey-light);
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: right;
+}
+
+.size-controls-input:hover {
+    transition: all 0.2s ease-in;
+    background-color: var(--color-grey-dark);
+}
+
+@media screen and (min-width: 850px) {
+    size-controls .button {
+        display: inline-block;
+    }
+}

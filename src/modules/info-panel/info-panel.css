@@ -1,0 +1,49 @@
+@import '../core/core.css';
+@import '../icon/icon.css';
+
+info-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--color-grey);
+}
+
+info-panel.is-maximized {
+    height: calc(100% - 2.625rem);
+}
+
+.info-panel-header {
+    padding: 0.25em;
+    line-height: 2;
+}
+
+.info-panel-navigation {
+    float: left;
+}
+
+.info-panel-navigation > * {
+    float: left;
+}
+
+.info-panel-navigation > * + * {
+    margin-left: var(--default-margin);
+}
+
+.info-panel-control {
+    float: right;
+}
+
+.info-panel-control .button {
+    width: 2.5rem;
+    float: left;
+    padding: 0;
+}
+
+.info-panel-control > * + * {
+    margin-left: var(--default-margin);
+}
+
+.info-panel-section {
+    height: calc(100% - 2rem);
+}
