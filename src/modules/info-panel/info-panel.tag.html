@@ -1,4 +1,4 @@
-<info-panel class="viewer-info" style="height:60%;">
+<info-panel class="viewer-info { 'is-maximized': isMaximized }">
 
     <header class="viewer-info-header">
         <nav class="viewer-info-nav">
@@ -13,9 +13,9 @@
         </nav>
 
         <div class="viewer-info-control">
-            <button class="viewer-button viewer-icon-align-top" title=""></button>
+            <button class="viewer-button viewer-icon-align-top" title="" onclick="{ toggleMaximize }"></button>
             <button class="viewer-button viewer-icon-clear" title="close info panel"
-                    onclick="{ opts.onClose }"></button>
+                    onclick="{ onClose }"></button>
         </div>
     </header>
 
@@ -27,8 +27,11 @@
     <script>
         var tag = this;
         tag.activeSection = undefined;
+        tag.isMaximized = false;
         opts.sections = {};
         tag.onSelectSection = onSelectSection;
+        tag.onClose = onClose;
+        tag.toggleMaximize = toggleMaximize;
         tag.on('update', onUpdate);
 
         function onSelectSection(event) {
@@ -40,6 +43,15 @@
                 tag.sections = opts.sections || {};
                 tag.activeSection = Object.keys(tag.sections)[0];
             }
+        }
+
+        function toggleMaximize() {
+            tag.isMaximized = !tag.isMaximized;
+        }
+
+        function onClose() {
+            opts.onClose();
+            tag.isMaximized = false;
         }
     </script>
 </info-panel>

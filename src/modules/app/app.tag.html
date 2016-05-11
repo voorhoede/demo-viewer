@@ -8,7 +8,8 @@
         <button class="viewer-button viewer-icon-info-outline { 'is-active': infoIsOpen }"
                 title="toggle module info"
                 disabled="{ !activeModule.info }"
-                onclick="{ toggleInfo }"></button>
+                onclick="{ toggleInfo }"
+                aria-controls="info-panel"></button>
         <button class="viewer-button viewer-icon-label" title="toggle annotations"
                 disabled></button>
 
@@ -16,7 +17,8 @@
     </header>
 
     <main class="viewer-content">
-        <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }" on-close="{ closeInfo }" />
+        <info-panel if="{ infoIsOpen }" id="info-panel" sections="{ activeModule.info }" on-close="{ closeInfo }"
+                    aria-expanded="{ infoIsOpen }"/>
 
         <iframe class="viewer-frame"
                 frameBorder="0"
