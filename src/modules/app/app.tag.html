@@ -7,6 +7,7 @@
         <button class="button { 'is-active': infoIsOpen }"
                 title="Toggle source"
                 disabled="{ !activeModule.info }"
+                aria-controls="info-panel"
                 onclick="{ toggleInfo }">
             <span class="icon-info-outline"></span>
             <span class="a11y-sr-only">Toggle source</span>
@@ -22,7 +23,8 @@
     </header>
 
     <main>
-        <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }" on-close="{ closeInfo }" />
+        <info-panel if="{ infoIsOpen }" id="info-panel" sections="{ activeModule.info }" on-close="{ closeInfo }"
+                    aria-expanded="{ infoIsOpen }" />
 
         <iframe class="app-frame"
                 frameBorder="0"

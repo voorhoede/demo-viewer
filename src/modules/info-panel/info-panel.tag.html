@@ -1,4 +1,4 @@
-<info-panel>
+<info-panel class="{ 'is-maximized': isMaximized }">
 
     <header class="info-panel-header clearfix">
         <nav class="info-panel-navigation" role="tablist">
@@ -12,7 +12,7 @@
             </button>
         </nav>
         <div class="info-panel-control">
-            <button class="button" title="Toggle maximize">
+            <button class="button" title="Toggle maximize" onclick="{ toggleMaximize }">
                 <span class="icon-align-top"></span>
                 <span class="a11y-sr-only">Toggle maximize</span>
             </button>
@@ -33,8 +33,11 @@
     <script>
         var tag = this;
         tag.activeSection = undefined;
+        tag.isMaximized = false;
         opts.sections = {};
         tag.onSelectSection = onSelectSection;
+        tag.onClose = onClose;
+        tag.toggleMaximize = toggleMaximize;
         tag.on('update', onUpdate);
 
         function onSelectSection(event) {
@@ -46,6 +49,15 @@
                 tag.sections = opts.sections || {};
                 tag.activeSection = Object.keys(tag.sections)[0];
             }
+        }
+
+        function toggleMaximize() {
+            tag.isMaximized = !tag.isMaximized;
+        }
+
+        function onClose() {
+            opts.onClose();
+            tag.isMaximized = false;
         }
     </script>
 </info-panel>
