@@ -17,7 +17,8 @@
     </header>
 
     <main class="viewer-content">
-        <info-panel if="{ infoIsOpen }" sections="{ activeModule.info }" on-close="{ closeInfo }" />
+        <info-panel if="{ infoIsOpen }" id="info-panel" sections="{ activeModule.info }" on-close="{ closeInfo }"
+                    aria-expanded="{ infoIsOpen }"/>
 
         <iframe class="viewer-frame"
                 frameBorder="0"
