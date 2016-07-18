@@ -9,6 +9,8 @@
     "build:css": "node scripts/postcss.js",
     "build:js": "npm run build:tags && npm run build:concat",
     "build:tags": "riot --type none --ext tag.html src/modules/ dist/tags.js",
+    "build:travis": "npm run build",
+    "postbuild:travis": "ncp ./examples/bootstrap-v3/ ./dist/",
     "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
     "postbuild": "rimraf dist/tags.js",
     "start": "http-server './' -c-1 -o -p 3366",
