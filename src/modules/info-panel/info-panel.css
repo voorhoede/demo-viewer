@@ -6,6 +6,7 @@ info-panel {
     bottom: 0;
     width: 100%;
     height: 50%;
+    padding-bottom: 2rem;
     background-color: var(--color-grey);
 }
 
