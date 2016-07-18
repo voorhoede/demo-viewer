@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist/ && mkdirp dist/",
     "build": "npm-run-all --parallel build:css build:js",
-    "build:css": "node scripts/postcss.js",
+    "build:css": "postcss -u postcss-import -u postcss-custom-properties -u cssnano -u autoprefixer --autoprefixer.browsers 'last 1 versions, ie >= 9' -o dist/demo-viewer.css src/index.css",
     "build:js": "npm run build:tags && npm run build:concat",
     "build:tags": "riot --type none --ext tag.html src/modules/ dist/tags.js",
     "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
@@ -39,8 +39,9 @@
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
     "npm-run-all": "1.5.1",
-    "postcss": "5.0.21",
+    "postcss-cli": "2.5.2",
     "postcss-css-variables": "0.5.1",
+    "postcss-custom-properties": "5.0.1",
     "postcss-import": "8.1.1",
     "rimraf": "2.5.2",
     "riot": "2.3.15"
