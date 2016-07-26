@@ -42,7 +42,7 @@
     "ncp": "2.0.0",
     "npm-run-all": "1.5.1",
     "postcss": "5.0.21",
-    "postcss-css-variables": "0.5.1",
+    "postcss-custom-properties": "5.0.1",
     "postcss-import": "8.1.1",
     "rimraf": "2.5.2",
     "riot": "2.3.15"
