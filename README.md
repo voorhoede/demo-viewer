@@ -2,9 +2,8 @@
 
 Preview components in isolation with documentation, annotations and breakpoint controls.
 
-## Live preview
+[Live preview](https://voorhoede.github.io/demo-viewer/)
 
-* [Bootstrap 3](https://voorhoede.github.io/bootstrap-v3)
 
 ## Contributing
 
