@@ -57,7 +57,7 @@ riot.tag2('info-panel', '<header class="info-panel-header clearfix"> <nav class=
             tag.isMaximized = false;
         }
 });
-riot.tag2('module-selector', '<label class="module-selector-label" for="selector"> <span class="a11y-sr-only">Module</span> <select class="module-selector-select" id="selector" name="selector" oninput="{onModuleSelect}"> <yield></yield> <optgroup each="{groupName, modules in moduleGroups}" label="{groupName}"> <option each="{module in modules}" value="{module.url}" __selected="{module.url == activeModule.url}"> {module.name} </option> </optgroup> </select> <span class="icon-expand-more"></span> </label> <a class="button" href="{activeModule.url}" target="_blank" rel="noopener noreferrer" title="Open module in new tab"> <span class="icon-launch"></span> <span class="a11y-sr-only">Open in new tab</span> </a>', '', '', function(opts) {
+riot.tag2('module-selector', '<label class="module-selector-label" for="selector"> <span class="a11y-sr-only">Module</span> <select class="module-selector-select" id="selector" name="selector" onchange="{onModuleSelect}"> <yield></yield> <optgroup each="{groupName, modules in moduleGroups}" label="{groupName}"> <option each="{module in modules}" value="{module.url}" __selected="{module.url == activeModule.url}"> {module.name} </option> </optgroup> </select> <span class="icon-expand-more"></span> </label> <a class="button" href="{activeModule.url}" target="_blank" rel="noopener noreferrer" title="Open module in new tab"> <span class="icon-launch"></span> <span class="a11y-sr-only">Open in new tab</span> </a>', '', '', function(opts) {
         var tag = this;
         tag.activeModule = undefined;
         tag.onModuleSelect = onModuleSelect;
@@ -94,6 +94,7 @@ riot.tag2('module-selector', '<label class="module-selector-label" for="selector
         }
 
         function onModuleSelect(event) {
+            console.log('ere');
             selectByUrl(event.target.value);
         }
 
