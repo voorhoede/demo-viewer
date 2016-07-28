@@ -1,6 +1,6 @@
 {
   "name": "demo-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
