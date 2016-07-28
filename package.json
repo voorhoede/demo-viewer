@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbmoelker/demo-viewer.git"
+    "url": "git+https://github.com/voorhoede/demo-viewer"
   },
-  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "author": "De Voorhoede <admin@voorhoede.nl> (https://voorhoede.nl/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jbmoelker/demo-viewer/issues"
+    "url": "https://github.com/voorhoede/demo-viewer/issues"
   },
-  "homepage": "https://github.com/jbmoelker/demo-viewer#readme",
+  "homepage": "https://github.com/voorhoede/demo-viewer#readme",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
