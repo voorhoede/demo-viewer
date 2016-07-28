@@ -18,7 +18,12 @@
     "test:eslint": "eslint src/**/*.js src/**/*.tag.html",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "chokidar 'src/**/*.css' --command 'npm run build:css'",
-    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'"
+    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'",
+    "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file --output-unreleased",
+    "commit": "git-cz",
+    "preversion": "npm run build && npm test",
+    "version": "npm run changelog && git add .",
+    "postversion": "git commit -m \"chore(version): v$npm_package_version\n$(conventional-changelog --preset angular)\" && git tag -a v$npm_package_version -m \"$(conventional-changelog --preset angular)\""
   },
   "repository": {
     "type": "git",
@@ -30,21 +35,29 @@
     "url": "https://github.com/jbmoelker/demo-viewer/issues"
   },
   "homepage": "https://github.com/jbmoelker/demo-viewer#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
-    "autoprefixer": "6.3.6",
-    "chokidar-cli": "1.2.0",
-    "concat-cli": "4.0.0",
-    "cssnano": "3.5.2",
-    "eslint": "2.4.0",
-    "eslint-plugin-html": "1.4.0",
-    "http-server": "0.8.5",
-    "mkdirp": "0.5.1",
-    "ncp": "2.0.0",
-    "npm-run-all": "1.5.1",
-    "postcss": "5.0.21",
-    "postcss-custom-properties": "5.0.1",
-    "postcss-import": "8.1.1",
-    "rimraf": "2.5.2",
-    "riot": "2.3.15"
+    "autoprefixer": "^6.3.6",
+    "chokidar-cli": "^1.2.0",
+    "concat-cli": "^4.0.0",
+    "cssnano": "^3.5.2",
+    "eslint": "^2.4.0",
+    "eslint-plugin-html": "^1.4.0",
+    "http-server": "^0.8.5",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^1.5.1",
+    "postcss": "^5.0.21",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-import": "^8.1.1",
+    "rimraf": "^2.5.2",
+    "riot": "^2.3.15",
+    "commitizen": "^2.8.1",
+    "conventional-changelog-cli": "^1.2.0",
+    "cz-conventional-changelog": "^1.1.6"
   }
 }
