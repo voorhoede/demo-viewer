@@ -2,6 +2,9 @@
 
 Preview components in isolation with documentation, annotations and breakpoint controls.
 
+
+[Live preview](https://voorhoede.github.io/demo-viewer/)
+
 ## Branding
 
 You can change the demo-viewer to look a little more like your own company brand.
@@ -9,12 +12,13 @@ You can change the demo-viewer to look a little more like your own company brand
 On the initial config for the demo-viewer you can pass a path to your logo.
 
 	window.demoViewer({
+		logo: '/path/to/logo',
         modules: [
-        	{ logo: '/path/to/logo' },
             { group: 'Media', name: 'Carousel', url: 'media/carousel/', info:
                 { readme: 'media/carousel/README.md', template: 'media/carousel/template.html' }
             }
-        ]
+        ],
+        sizes: [...]
     });
 
 Also you style the modules on `src/` folder:
@@ -27,3 +31,8 @@ Also you style the modules on `src/` folder:
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for [guidelines](CONTRIBUTING.md#guidelines) and [development scripts](CONTRIBUTING.md#scripts).
+
+
+## License
+
+MIT © [De Voorhoede](https://www.voorhoede.nl/)

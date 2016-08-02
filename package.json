@@ -1,16 +1,15 @@
 {
   "name": "demo-viewer",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.1.1",
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
     "prebuild": "rimraf dist/ && mkdirp dist/",
-    "build": "npm-run-all --parallel build:css build:js copy:examples",
+    "build": "npm-run-all --parallel build:css build:js build:examples build:index",
     "build:css": "node scripts/postcss.js",
     "build:js": "npm run build:tags && npm run build:concat",
     "build:tags": "riot --type none --ext tag.html src/modules/ dist/tags.js",
-    "copy:examples": "ncp ./examples/ ./dist/",
-    "postcopy:examples": "ncp ./index.html ./dist/index.html",
+    "build:examples": "ncp ./examples/ ./dist/examples/",
+    "build:index": "ncp ./index.html ./dist/index.html",
     "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
     "postbuild": "rimraf dist/tags.js",
     "start": "http-server './dist' -c-1 -o -p 3366",
@@ -18,33 +17,46 @@
     "test:eslint": "eslint src/**/*.js src/**/*.tag.html",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "chokidar 'src/**/*.css' --command 'npm run build:css'",
-    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'"
+    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'",
+    "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file --output-unreleased",
+    "commit": "git-cz",
+    "preversion": "npm run build && npm test",
+    "version": "npm run changelog && git add .",
+    "postversion": "git commit -m \"chore(version): v$npm_package_version\n$(conventional-changelog --preset angular)\" && git tag -a v$npm_package_version -m \"$(conventional-changelog --preset angular)\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbmoelker/demo-viewer.git"
+    "url": "git+https://github.com/voorhoede/demo-viewer"
   },
-  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "author": "De Voorhoede <admin@voorhoede.nl> (https://voorhoede.nl/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jbmoelker/demo-viewer/issues"
+    "url": "https://github.com/voorhoede/demo-viewer/issues"
   },
-  "homepage": "https://github.com/jbmoelker/demo-viewer#readme",
+  "homepage": "https://github.com/voorhoede/demo-viewer#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
-    "autoprefixer": "6.3.6",
+    "autoprefixer": "6.3.7",
     "chokidar-cli": "1.2.0",
+    "commitizen": "2.8.2",
     "concat-cli": "4.0.0",
-    "cssnano": "3.5.2",
-    "eslint": "2.4.0",
-    "eslint-plugin-html": "1.4.0",
-    "http-server": "0.8.5",
+    "conventional-changelog-cli": "1.2.0",
+    "cssnano": "3.7.3",
+    "cz-conventional-changelog": "1.1.6",
+    "eslint": "3.2.2",
+    "eslint-plugin-html": "1.5.1",
+    "http-server": "0.9.0",
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
-    "npm-run-all": "1.5.1",
-    "postcss": "5.0.21",
-    "postcss-css-variables": "0.5.1",
-    "postcss-import": "8.1.1",
-    "rimraf": "2.5.2",
-    "riot": "2.3.15"
+    "npm-run-all": "2.3.0",
+    "postcss": "5.1.1",
+    "postcss-custom-properties": "5.0.1",
+    "postcss-import": "8.1.2",
+    "rimraf": "2.5.4",
+    "riot": "2.5.0"
   }
 }
