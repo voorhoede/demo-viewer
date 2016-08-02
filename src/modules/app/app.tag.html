@@ -1,7 +1,7 @@
 <app>
 
     <header class="app-header clearfix">
-        <module-selector modules="{ opts.modules }" default-module="{ opts.defaultModule }" on-select="{ setModule }">
+        <module-selector modules="{ opts.modules }" logo="{ opts.logo }" default-module="{ opts.defaultModule }" on-select="{ setModule }">
             <yield/>
         </module-selector>
         <button class="button { 'is-active': infoIsOpen }"

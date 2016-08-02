@@ -1,8 +1,8 @@
 <module-selector>
-
+    <img class="module-selector-logo" if="{ opts.logo }" src="{ opts.logo }" alt="">
     <label class="module-selector-label" for="selector">
         <span class="a11y-sr-only">Module</span>
-        <select class="module-selector-select" id="selector" name="selector" oninput="{ onModuleSelect }">
+        <select class="module-selector-select" id="selector" name="selector" onchange="{ onModuleSelect }">
             <yield/>
             <optgroup each="{ groupName, modules in moduleGroups }" label="{ groupName }">
                 <option each="{ module in modules }" value="{ module.url }"
