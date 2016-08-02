@@ -8,3 +8,8 @@ Preview components in isolation with documentation, annotations and breakpoint c
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for [guidelines](CONTRIBUTING.md#guidelines) and [development scripts](CONTRIBUTING.md#scripts).
+
+
+## License
+
+MIT © [De Voorhoede](https://www.voorhoede.nl/)

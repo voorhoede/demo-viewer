@@ -1,7 +1,6 @@
 {
   "name": "demo-viewer",
   "version": "0.1.0",
-  "private": true,
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
     "prebuild": "rimraf dist/ && mkdirp dist/",
