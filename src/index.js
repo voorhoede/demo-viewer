@@ -10,7 +10,7 @@ window.demoViewer = function(config){
     if (typeof config.modules === 'string') {
         getJson(config.modules, function(err, modules) {
             if (err) { window.console.log('error fetching modules', err); }
-            window.riot.mount(app, { modules: modules, sizes: config.sizes });
+            window.riot.mount(app, { modules: modules, logo: config.logo, sizes: config.sizes });
         });
     } else {
         window.riot.mount(app, config);

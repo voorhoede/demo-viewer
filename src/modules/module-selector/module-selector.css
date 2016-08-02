@@ -44,3 +44,10 @@ module-selector .button {
     margin-left: var(--default-margin);
     vertical-align: top;
 }
+
+.module-selector-logo {
+    float: left;
+    margin-right: 0.5rem;
+    max-height: 2.5rem;
+    width: auto;
+}
