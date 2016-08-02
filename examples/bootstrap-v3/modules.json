@@ -1,0 +1,11 @@
+[
+  { "group": "Media", "name": "Carousel", "url": "media/carousel/", "info":
+  { "readme": "media/carousel/README.md", "template": "media/carousel/template.html" }
+  },
+  { "group": "Media", "name": "Media object", "url": "media/media-object/", "info":
+  { "readme": "media/media-object/README.md", "template": "media/media-object/template.html" }
+  },
+  { "group": "Media", "name": "Responsive embed", "url": "media/responsive-embed/", "info":
+  { "readme": "media/responsive-embed/README.md", "template": "media/responsive-embed/template.html" }
+  }
+]
