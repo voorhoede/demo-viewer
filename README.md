@@ -11,17 +11,19 @@ You can change the demo-viewer to look a little more like your own company brand
 
 On the initial config for the demo-viewer you can pass a path to your logo.
 
-	window.demoViewer({
-		logo: '/path/to/logo',
-        modules: [
-            { group: 'Media', name: 'Carousel', url: 'media/carousel/', info:
-                { readme: 'media/carousel/README.md', template: 'media/carousel/template.html' }
-            }
-        ],
-        sizes: [...]
-    });
+```javascript
+window.demoViewer({
+	logo: '/path/to/logo',
+	modules: [
+		{ group: 'Media', name: 'Carousel', url: 'media/carousel/', info:
+			{ readme: 'media/carousel/README.md', template: 'media/carousel/template.html' }
+		}
+	],
+	sizes: [...]
+});
+```
 
-Also you style the modules on `src/` folder:
+Also you can style the modules on `src/` folder:
 
 * app & core: general app styling
 * info-panel: the bottom overlay that shows documentation and code

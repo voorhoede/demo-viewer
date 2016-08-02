@@ -104,6 +104,9 @@ After installing dependencies (run `npm install`) the following scripts are avai
 `build:css` | Compile and minify CSS to `dist/demo-viewer.css`, plus sourcemap.
 `build:tags` | Compile and bundle all tag files to `dist/tags.js`.
 `build:min` | Minify tags bundle to `dist/demo-viewer.js` plus sourcemap.
+`changelog` | Generate the changelog based on commits
+`commit` | Make a commit using the project configuration for contribution.
+`version` | Bumps the version, tags and generates changelog
 `start` | Starts a server on `http://localhost:3366` ("demo" in T9).
 `test` | Run linter.
 `test:eslint` | Check all tag files for format and syntax errors.
