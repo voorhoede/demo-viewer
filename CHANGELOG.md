@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/voorhoede/demo-viewer/compare/v0.2.1...v1.0.0) (2016-08-02)
+
+
+### Bug Fixes
+
+* **changelog:** fix changelog ([fe3ea3c](https://github.com/voorhoede/demo-viewer/commit/fe3ea3c))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/voorhoede/demo-viewer/compare/v0.1.1...v0.2.1) (2016-08-02)
 
