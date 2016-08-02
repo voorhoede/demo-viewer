@@ -1,3 +1,18 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/voorhoede/demo-viewer/compare/v0.1.1...v0.2.1) (2016-08-02)
+
+
+### Bug Fixes
+
+* **examples:** add example logo from twbs ([0530535](https://github.com/voorhoede/demo-viewer/commit/0530535))
+
+
+### Features
+
+* **branding:** add possibility of logo from config ([8d8aed8](https://github.com/voorhoede/demo-viewer/commit/8d8aed8))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/voorhoede/demo-viewer/compare/v0.1.1...v0.2.0) (2016-08-02)
 
