@@ -1,6 +1,6 @@
 {
   "name": "demo-viewer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
@@ -18,23 +18,36 @@
     "test:eslint": "eslint src/**/*.js src/**/*.tag.html",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "chokidar 'src/**/*.css' --command 'npm run build:css'",
-    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'"
+    "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'",
+    "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file --output-unreleased",
+    "commit": "git-cz",
+    "preversion": "npm run build && npm test",
+    "version": "npm run changelog && git add .",
+    "postversion": "git commit -m \"chore(version): v$npm_package_version\n$(conventional-changelog --preset angular)\" && git tag -a v$npm_package_version -m \"$(conventional-changelog --preset angular)\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbmoelker/demo-viewer.git"
+    "url": "git+https://github.com/voorhoede/demo-viewer"
   },
-  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "author": "De Voorhoede <admin@voorhoede.nl> (https://voorhoede.nl/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jbmoelker/demo-viewer/issues"
+    "url": "https://github.com/voorhoede/demo-viewer/issues"
   },
-  "homepage": "https://github.com/jbmoelker/demo-viewer#readme",
+  "homepage": "https://github.com/voorhoede/demo-viewer#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "autoprefixer": "6.3.7",
     "chokidar-cli": "1.2.0",
+    "commitizen": "2.8.2",
     "concat-cli": "4.0.0",
+    "conventional-changelog-cli": "1.2.0",
     "cssnano": "3.7.3",
+    "cz-conventional-changelog": "1.1.6",
     "eslint": "3.2.2",
     "eslint-plugin-html": "1.5.1",
     "http-server": "0.9.0",
