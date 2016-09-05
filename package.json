@@ -54,7 +54,7 @@
     "postcss-custom-properties": "5.0.1",
     "postcss-import": "8.1.2",
     "rimraf": "2.5.4",
-    "riot": "2.5.0",
+    "riot": "2.6.1",
     "semantic-release": "4.3.5"
   }
 }
