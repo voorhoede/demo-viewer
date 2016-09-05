@@ -1,6 +1,6 @@
 {
   "name": "demo-viewer",
-  "version": "1.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Preview components in isolation with documentation, annotations and breakpoint controls.",
   "scripts": {
     "prebuild": "rimraf dist/ && mkdirp dist/",
@@ -18,15 +18,12 @@
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "chokidar 'src/**/*.css' --command 'npm run build:css'",
     "watch:js": "chokidar 'src/**/*.js' 'src/**/*.tag.html' --command 'npm run build:js'",
-    "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file --output-unreleased",
     "commit": "git-cz",
-    "preversion": "npm run build && npm test",
-    "version": "npm run changelog && git add .",
-    "postversion": "git commit -m \"chore(version): v$npm_package_version\n$(conventional-changelog --preset angular)\" && git tag -a v$npm_package_version -m \"$(conventional-changelog --preset angular)\""
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/voorhoede/demo-viewer"
+    "url": "https://github.com/voorhoede/demo-viewer"
   },
   "author": "De Voorhoede <admin@voorhoede.nl> (https://voorhoede.nl/)",
   "license": "MIT",
@@ -57,6 +54,7 @@
     "postcss-custom-properties": "5.0.1",
     "postcss-import": "8.1.2",
     "rimraf": "2.5.4",
-    "riot": "2.5.0"
+    "riot": "2.5.0",
+    "semantic-release": "4.3.5"
   }
 }
