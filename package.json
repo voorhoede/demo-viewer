@@ -45,7 +45,7 @@
     "cssnano": "3.7.7",
     "cz-conventional-changelog": "1.2.0",
     "eslint": "3.8.1",
-    "eslint-plugin-html": "1.5.3",
+    "eslint-plugin-html": "1.5.4",
     "http-server": "0.9.0",
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
