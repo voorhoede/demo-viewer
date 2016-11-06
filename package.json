@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "autoprefixer": "6.5.0",
+    "autoprefixer": "6.5.2",
     "chokidar-cli": "1.2.0",
     "commitizen": "2.8.6",
     "concat-cli": "4.0.0",
