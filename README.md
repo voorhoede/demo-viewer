@@ -1,24 +1,16 @@
 # Demo viewer
 
-> Preview components in isolation with documentation, annotations and breakpoint controls.
+**Preview components in isolation with documentation, annotations and breakpoint controls.**
 
 [![demo-viewer on npm](https://badge.fury.io/js/demo-viewer.svg)](https://www.npmjs.com/package/demo-viewer)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-<figure>
-	<img alt="Demo viewer in browser with preview of Bootstrap carousel component" src="docs/demo-viewer-example.png" style="max-width:100%">
-	<figcaption>
-		<p>Demo viewer in action in the browser with</p>
-		<ul>
-			<li>module selector and custom logo on top-left</li>
-			<li>preview of the currently selected module in the center</li>
-			<li>size controls on top-right</li>
-			<li>info panel opened in the bottom</li>
-		</ul>
-	</figcaption>
-</figure>
+The demo-viewer is a single page web app with a large viewport to view your modules, controlled via a toolbar at the top.
+You can use the toolbar to select modules, control the viewport size and open the info panel for the current module:
 
-## Examples
+<img alt="Demo viewer in browser with preview of Bootstrap carousel component" src="docs/demo-viewer-example.png" style="max-width:100%">
+
+## Live demos
 
 * [Bootstrap v3 with config in HTML file](https://voorhoede.github.io/demo-viewer/examples/bootstrap-v3/) ([template](examples/bootstrap-v3/index.html))
 * [Bootstrap v3 with config in external JSON file](https://voorhoede.github.io/demo-viewer/examples/bootstrap-v3/index-json.html) ([template](examples/bootstrap-v3/index-json.html), [external config](examples/bootstrap-v3/modules.json))
@@ -139,10 +131,10 @@ demoViewer({
 	{
 		"group": "Auth",
 		"name": "Login form",
-		"url": "demo/auth/login-form"
-		"info" {
+		"url": "demo/auth/login-form",
+		"info": {
 			"readme": "demo/auth/README.md",
-      		"template": "demo/auth/template.html"
+			"template": "demo/auth/template.html"
 		}
 	},
 	...
