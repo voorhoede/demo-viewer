@@ -10,7 +10,7 @@
     "build:tags": "riot --type none --ext tag.html src/modules/ dist/tags.js",
     "build:docs": "ncp ./docs/ ./dist/docs/",
     "build:examples": "ncp ./examples/ ./dist/examples/",
-    "build:index": "formatter README.md --output dist/index.html",
+    "build:index": "node scripts/build-index.js",
     "build:concat": "concat-cli --files node_modules/riot/riot.min.js dist/tags.js src/index.js --output dist/demo-viewer.js",
     "postbuild": "rimraf dist/tags.js",
     "start": "http-server './dist' -c-1 -o -p 3366",
