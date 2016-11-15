@@ -100,10 +100,13 @@ After installing dependencies (run `npm install`) the following scripts are avai
 
 `npm run ...` | Description
 ---|---
-`build` | Compile, bundle and minify all css and tag files.
+`build` | Compile css and js files, copy assets & examples and format index.
 `build:css` | Compile and minify CSS to `dist/demo-viewer.css`, plus sourcemap.
+`build:js` | Compile tags and combine with `riot.js` into `dist/demo-viewer.js`.
 `build:tags` | Compile and bundle all tag files to `dist/tags.js`.
-`build:min` | Minify tags bundle to `dist/demo-viewer.js` plus sourcemap.
+`build:docs` | Copy all documentation assets to `dist/docs/`.
+`build:examples` | Copy all examples to `dist/examples/`.
+`build:index` | Formats the readme as html page written to `dist/index.html`.
 `changelog` | Generate the changelog based on commits
 `commit` | Make a commit using the project configuration for contribution.
 `version` | Bumps the version, tags and generates changelog
