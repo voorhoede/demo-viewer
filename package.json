@@ -44,7 +44,7 @@
     "commitizen": "2.8.6",
     "concat-cli": "4.0.0",
     "conventional-changelog-cli": "1.2.0",
-    "cssnano": "3.7.7",
+    "cssnano": "3.8.0",
     "cz-conventional-changelog": "1.2.0",
     "eslint": "3.8.1",
     "eslint-plugin-html": "1.5.4",
